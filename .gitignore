@@ -1,0 +1,9 @@
+# Mac / Windows / Editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.env
+.env.*
+node_modules/
+__pycache__/

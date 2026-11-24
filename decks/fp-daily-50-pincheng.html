@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《用第一性原理讀懂日常》10 分鐘麥肯錫精華簡報 ｜ 第一性原理知識庫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/deck.css" />
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="deck-topbar">
+    <div class="deck-left">
+      <a href="../index.html" class="btn-back-home">← 返回知識庫首頁</a>
+      <div class="deck-title-bar"><span>FP-02</span>《用第一性原理讀懂日常：50個生活問題的重新拆解》— 10 分鐘麥肯錫精華簡報</div>
+    </div>
+    <div class="deck-controls">
+      <span class="timer-pill" id="timer-pill" title="點擊開始/暫停 10 分鐘演講計時（雙擊重置）">⏱ 10:00</span>
+      <span class="slide-counter" id="slide-counter">01 / 15</span>
+      <button type="button" class="ctrl-btn" id="btn-grid" title="縮圖總覽與頁內檢索 (G)">☰ 總覽 (G)</button>
+      <button type="button" class="ctrl-btn" id="btn-notes" title="切換三段式講者備忘稿 (N)">📝 講稿 (N)</button>
+      <button type="button" class="ctrl-btn" id="btn-print" title="列印或匯出 PDF">🖨 PDF</button>
+      <button type="button" class="ctrl-btn" id="btn-fullscreen" title="全螢幕簡報 (F)">⛶ 全螢幕 (F)</button>
+    </div>
+  </header>
+
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+  <button type="button" class="nav-arrow prev" id="btn-prev" aria-label="上一頁">‹</button>
+  <button type="button" class="nav-arrow next" id="btn-next" aria-label="下一頁">›</button>
+
+  <main class="stage-wrapper" id="stage-wrapper">
+    <div class="stage-scaler" id="stage-scaler">
+
+      <!-- ==================== SLIDE 1: COVER ==================== -->
+      <section class="slide cover-slide active" id="slide-1" data-kicker="封面與核心主張" data-title="追問到根，自由選擇：拆解七大人生維度五十個日常難題"
+        data-note-conclusion="品成心理《用第一性原理讀懂日常》的核心主張是「追問到根，自由選擇」——現代人選項極多卻越選越焦慮，根源在於看不清問題本質。"
+        data-note-evidence="全書由微信讀書出品（2026年10月），涵蓋七個生活維度共 50 個高頻命題，每題都以「本質是 X，不是 Y」的對立結構呈現，並結合東西方經典與現代心理/經濟學實證。"
+        data-note-transition="第 2 頁先用一張全書結構骨架圖，看懂這 50 個問題是如何從內在自我一路展開到終極人生意義。">
+        <div class="cover-grid">
+          <div>
+            <div class="cover-eyebrow">McKINSEY 10-MIN EXECUTIVE BRIEFING · FP-02</div>
+            <h1 class="cover-title">追問到根，<span>自由選擇</span>：50 個生活問題的第一性原理重新拆解</h1>
+            <p class="cover-subtitle">
+              原著：品成心理 ｜ 微信讀書出品（2026-10-14）<br>
+              把複雜的生活困擾一層層剝開，把真正的需求一點點看清，從表層慣性取回人生選擇權。
+            </p>
+            <div class="cover-quote">
+              「今天的人選項多得挑不完，可選項越多越不會選，因為選擇的質量取決於把問題看得多透。看清了本質，哪個該留、哪個該舍一眼分明。」—— 序言〈追問到根，自由選擇〉
+            </div>
+            <div class="cover-metrics">
+              <div class="cover-metric-box"><strong>50 題</strong><span>日常本質拆解</span></div>
+              <div class="cover-metric-box"><strong>7 維度</strong><span>自我至人生意義</span></div>
+              <div class="cover-metric-box"><strong>4 步驟</strong><span>通用拆解漏斗</span></div>
+              <div class="cover-metric-box"><strong>10 分鐘</strong><span>15 頁結構導讀</span></div>
+            </div>
+          </div>
+          <div class="cover-art-frame">
+            <img src="../assets/images/book-fp-daily-50-cover.jpg" alt="《用第一性原理讀懂日常》重新繪製封面插畫：螺旋漏斗萃取黃金本質核心" />
+            <div class="cover-art-scrim"></div>
+            <div class="cover-art-caption">
+              <span class="tag">REDRAWN EDITION · ESSENTIAL DISTILLATION</span>
+              <strong>《用第一性原理讀懂日常》</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 2: ARCHITECTURE ==================== -->
+      <section class="slide" id="slide-2" data-kicker="全書邏輯骨架" data-title="四步追問法貫穿七大人生維度，從自我內核走向選擇自由"
+        data-note-conclusion="全書架構不是隨機的 50 篇散文，而是由內而外、由基礎到意義的七層同心圓展開，每一條都套用同一套「四步追問法」。"
+        data-note-evidence="序言確立四步方法論與馬斯克/蘇格拉底/《大學》源頭；第一至七部分依序涵蓋：自我成長(11條)、思維認知(8條)、事業成就(6條)、財富金錢(5條)、關係情感(10條)、健康身體(5條)、人生意義(5條)，合計 50 條。"
+        data-note-transition="先掌握全書地圖後，第 3 頁我們解剖這把「追問之刀」本身：第一性原理四步法如何把火箭發射成本砍掉 92%？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">01 · 全書架構總覽 <span class="archetype-badge">版型 2 + 4：結構骨架圖</span></div>
+            <h2 class="action-title">全書以「四步追問法」為總引擎，由內而外重新校準 7 大人生維度的 50 個底層定義</h2>
+          </div>
+          <div class="slide-page-badge">P02 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="svg-box" style="flex:1;">
+            <svg viewBox="0 0 1120 390" xmlns="http://www.w3.org/2000/svg" aria-label="七大人生維度與四步引擎骨架圖">
+              <!-- Top Engine -->
+              <rect x="20" y="14" width="1080" height="72" rx="10" fill="#051C2C"/>
+              <text x="42" y="42" fill="#FBBF24" font-size="15" font-weight="700">序言 · 總方法論引擎：第一性原理四步法（馬斯克 SpaceX 2% 原材料 ✕ 蘇格拉底反詰法 ✕ 《大學》物有本末）</text>
+              <text x="42" y="68" fill="#CBD5E1" font-size="12.5">① 拋開大家習慣的做法 ➔ ② 連問為什麼直到無法再分（本質） ➔ ③ 鎖定必須滿足的條件 ➔ ④ 重建滿足該條件的新解法</text>
+
+              <!-- 7 Dimension Cards -->
+              <rect x="20" y="108" width="144" height="205" rx="8" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="1.8"/>
+              <rect x="20" y="108" width="144" height="32" rx="6" fill="#1E3A8A"/>
+              <text x="92" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">一、自我與成長</text>
+              <text x="92" y="162" text-anchor="middle" fill="#D97706" font-size="18" font-weight="800">#1–#11</text>
+              <text x="30" y="188" fill="#334155" font-size="11.5">• 自律＝習慣</text>
+              <text x="30" y="208" fill="#334155" font-size="11.5">• 專注＝放棄</text>
+              <text x="30" y="228" fill="#334155" font-size="11.5">• 情緒＝接納</text>
+              <text x="30" y="248" fill="#334155" font-size="11.5">• 反內耗＝行動</text>
+              <text x="30" y="268" fill="#334155" font-size="11.5">• 鬆弛＝放執念</text>
+              <text x="30" y="294" fill="#1E3A8A" font-size="11" font-weight="700">（11 條內在秩序）</text>
+
+              <rect x="176" y="108" width="144" height="205" rx="8" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="1.8"/>
+              <rect x="176" y="108" width="144" height="32" rx="6" fill="#1E3A8A"/>
+              <text x="248" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">二、思維與認知</text>
+              <text x="248" y="162" text-anchor="middle" fill="#D97706" font-size="18" font-weight="800">#12–#19</text>
+              <text x="186" y="188" fill="#334155" font-size="11.5">• 升級＝換框架</text>
+              <text x="186" y="208" fill="#334155" font-size="11.5">• 祛魅＝看真實</text>
+              <text x="186" y="228" fill="#334155" font-size="11.5">• 學習＝應用</text>
+              <text x="186" y="248" fill="#334155" font-size="11.5">• 決策＝目的</text>
+              <text x="186" y="268" fill="#334155" font-size="11.5">• 覆盤＝提規律</text>
+              <text x="186" y="294" fill="#1E3A8A" font-size="11" font-weight="700">（8 條認知工具）</text>
+
+              <rect x="332" y="108" width="144" height="205" rx="8" fill="#F8FAFC" stroke="#00A9F4" stroke-width="1.8"/>
+              <rect x="332" y="108" width="144" height="32" rx="6" fill="#0369A1"/>
+              <text x="404" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">三、事業與成就</text>
+              <text x="404" y="162" text-anchor="middle" fill="#D97706" font-size="18" font-weight="800">#20–#25</text>
+              <text x="342" y="188" fill="#334155" font-size="11.5">• 職場＝價值</text>
+              <text x="342" y="208" fill="#334155" font-size="11.5">• 長期＝複利</text>
+              <text x="342" y="228" fill="#334155" font-size="11.5">• 管理＝成就人</text>
+              <text x="342" y="248" fill="#334155" font-size="11.5">• 反脆弱＝用波動</text>
+              <text x="342" y="268" fill="#334155" font-size="11.5">• 匠心＝合道</text>
+              <text x="342" y="294" fill="#0369A1" font-size="11" font-weight="700">（6 條產出槓桿）</text>
+
+              <rect x="488" y="108" width="144" height="205" rx="8" fill="#FFFDF7" stroke="#D97706" stroke-width="1.8"/>
+              <rect x="488" y="108" width="144" height="32" rx="6" fill="#B45309"/>
+              <text x="560" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">四、財富與金錢</text>
+              <text x="560" y="162" text-anchor="middle" fill="#B45309" font-size="18" font-weight="800">#26–#30</text>
+              <text x="498" y="188" fill="#334155" font-size="11.5">• 投資＝風控</text>
+              <text x="498" y="208" fill="#334155" font-size="11.5">• 斷舍離＝留重要</text>
+              <text x="498" y="228" fill="#334155" font-size="11.5">• 營銷＝價值交換</text>
+              <text x="498" y="248" fill="#334155" font-size="11.5">• 保險＝互助</text>
+              <text x="498" y="268" fill="#334155" font-size="11.5">• 財富＝資產</text>
+              <text x="498" y="294" fill="#B45309" font-size="11" font-weight="700">（5 條存量守則）</text>
+
+              <rect x="644" y="108" width="144" height="205" rx="8" fill="#F8FAFC" stroke="#00A9F4" stroke-width="1.8"/>
+              <rect x="644" y="108" width="144" height="32" rx="6" fill="#0369A1"/>
+              <text x="716" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">五、關係與情感</text>
+              <text x="716" y="162" text-anchor="middle" fill="#D97706" font-size="18" font-weight="800">#31–#40</text>
+              <text x="654" y="188" fill="#334155" font-size="11.5">• 家庭＝責任</text>
+              <text x="654" y="208" fill="#334155" font-size="11.5">• 親子＝陪伴</text>
+              <text x="654" y="228" fill="#334155" font-size="11.5">• 社交＝品質</text>
+              <text x="654" y="248" fill="#334155" font-size="11.5">• 邊界＝分你我</text>
+              <text x="654" y="268" fill="#334155" font-size="11.5">• 情緒價值＝接納</text>
+              <text x="654" y="294" fill="#0369A1" font-size="11" font-weight="700">（10 條關係契約）</text>
+
+              <rect x="800" y="108" width="144" height="205" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.8"/>
+              <rect x="800" y="108" width="144" height="32" rx="6" fill="#0F766E"/>
+              <text x="872" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">六、健康與身體</text>
+              <text x="872" y="162" text-anchor="middle" fill="#0F766E" font-size="18" font-weight="800">#41–#45</text>
+              <text x="810" y="188" fill="#334155" font-size="11.5">• 健康＝身心愉悅</text>
+              <text x="810" y="208" fill="#334155" font-size="11.5">• 減肥＝攝入&lt;消耗</text>
+              <text x="810" y="228" fill="#334155" font-size="11.5">• 睡眠＝規律</text>
+              <text x="810" y="248" fill="#334155" font-size="11.5">• 飲食＝均衡</text>
+              <text x="810" y="268" fill="#334155" font-size="11.5">• 運動＝可持續</text>
+              <text x="810" y="294" fill="#0F766E" font-size="11" font-weight="700">（5 條生理秩序）</text>
+
+              <rect x="956" y="108" width="144" height="205" rx="8" fill="#051C2C"/>
+              <rect x="956" y="108" width="144" height="32" rx="6" fill="#D97706"/>
+              <text x="1028" y="129" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">七、人生與意義</text>
+              <text x="1028" y="162" text-anchor="middle" fill="#FBBF24" font-size="18" font-weight="800">#46–#50</text>
+              <text x="966" y="188" fill="#E2E8F0" font-size="11.5">• 幸福＝意義</text>
+              <text x="966" y="208" fill="#E2E8F0" font-size="11.5">• 心流＝投入</text>
+              <text x="966" y="228" fill="#E2E8F0" font-size="11.5">• 實現＝成自己</text>
+              <text x="966" y="248" fill="#E2E8F0" font-size="11.5">• 自洽＝一致</text>
+              <text x="966" y="268" fill="#FBBF24" font-size="11.5" font-weight="700">• 自由＝能選擇</text>
+              <text x="966" y="294" fill="#7DD3FC" font-size="11" font-weight="700">（5 條終極歸宿）</text>
+
+              <!-- Bottom convergence -->
+              <rect x="20" y="330" width="1080" height="46" rx="8" fill="#FEF3C7" stroke="#F59E0B"/>
+              <text x="560" y="358" text-anchor="middle" fill="#92400E" font-size="13.5" font-weight="700">最終收斂：每一條都遵循「是 X，不是 Y」結構 ➔ 看清根源之後，在選項過剩的時代為自己拿回專屬選擇權（#50 自由）</text>
+            </svg>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常：50個生活問題的重新拆解》目錄與序言</span><span>McKinsey Architecture Map</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 3: METHOD & SPACEX ==================== -->
+      <section class="slide" id="slide-3" data-kicker="序言 · 方法論源流" data-title="類比思維困於高價慣性，第一性四步法看穿 2% 原材料降本 92%"
+        data-note-conclusion="類比思維看別人怎麼做就跟著做；第一性原理四步法追問到不可再分的基本事實（如火箭原料僅佔售價約 2%），砍掉中間冗餘重建系統，實現 92% 成本降幅。"
+        data-note-evidence="2001 年馬斯克赴俄買退役彈道導彈，報價從 800 萬漲到 1800 萬美元；當時傳統近地軌道發射均價約 $18,500/kg。馬斯克拆解鋁/鈦/銅/碳纖維原料約佔 2%（對比特斯拉汽車原料佔 20-25%），發現貴在「未上天零件不用」舊規矩、4-5 層外包加價、與政府成本加成合同。SpaceX 自製＋回收佔整枚價約 3/4 的一級火箭，將獵鷹 9 號降至 $2,700/kg、重型獵鷹降至 $1,400/kg（降幅達 92%）。"
+        data-note-transition="掌握這套四步拆解漏斗後，第 4 頁起我們正式進入第一維度「自我與成長」（#1–#6）。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">02 · 序言：第一性原理四步拆解法 <span class="archetype-badge">版型 1 + 6：標竿實證與對立</span></div>
+            <h2 class="action-title">破除「向來如此」的類比惰性：SpaceX 看穿原料僅 2% 實現單位發射成本降 92%</h2>
+          </div>
+          <div class="slide-page-badge">P03 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 610 400" xmlns="http://www.w3.org/2000/svg" aria-label="SpaceX 入軌成本降幅與火箭價格結構拆解">
+                <text x="18" y="26" fill="#051C2C" font-size="14.5" font-weight="700">SpaceX 第一性原理實證：近地軌道每公斤載荷發射成本對比</text>
+                <!-- Bar chart -->
+                <rect x="20" y="46" width="570" height="175" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="36" y="76" fill="#475569" font-size="12.5" font-weight="700">傳統航天均價</text>
+                <rect x="145" y="58" width="380" height="26" rx="4" fill="#94A3B8"/>
+                <text x="532" y="76" fill="#334155" font-size="12.5" font-weight="700">$18,500 / kg</text>
+
+                <text x="36" y="122" fill="#1E3A8A" font-size="12.5" font-weight="700">獵鷹 9 號</text>
+                <rect x="145" y="104" width="56" height="26" rx="4" fill="#00A9F4"/>
+                <text x="210" y="122" fill="#0369A1" font-size="12.5" font-weight="700">~$2,700 / kg</text>
+
+                <text x="36" y="168" fill="#B45309" font-size="12.5" font-weight="700">重型獵鷹</text>
+                <rect x="145" y="150" width="29" height="26" rx="4" fill="#D97706"/>
+                <text x="184" y="168" fill="#B45309" font-size="13" font-weight="800">$1,400 / kg（整體降幅 92%！）</text>
+
+                <text x="36" y="205" fill="#475569" font-size="11.5">拆解真相：鋁/鈦/銅/碳纖維原料僅佔 ~2%（汽車 20–25%）；98% 貴在 4–5 層外包、60年代零件與成本加成合同</text>
+
+                <!-- 4 steps funnel -->
+                <rect x="20" y="238" width="570" height="150" rx="10" fill="#051C2C"/>
+                <text x="38" y="264" fill="#FBBF24" font-size="13.5" font-weight="700">通用四步操作法（本書 50 個生活問題全部套用此漏斗）</text>
+                <rect x="36" y="280" width="128" height="92" rx="6" fill="#132E52"/>
+                <text x="48" y="302" fill="#7DD3FC" font-size="12.5" font-weight="700">1. 放下慣例</text>
+                <text x="48" y="324" fill="#E2E8F0" font-size="11">擱置別人怎麼做，</text>
+                <text x="48" y="342" fill="#E2E8F0" font-size="11">問這件事本身是什麼</text>
+
+                <rect x="174" y="280" width="134" height="92" rx="6" fill="#1E3A8A" stroke="#F59E0B"/>
+                <text x="186" y="302" fill="#FBBF24" font-size="12.5" font-weight="700">2. 追問至底 ★</text>
+                <text x="186" y="324" fill="#fff" font-size="11">連問為什麼到無可再</text>
+                <text x="186" y="342" fill="#fff" font-size="11">問（不可再分的事實）</text>
+
+                <rect x="318" y="280" width="128" height="92" rx="6" fill="#132E52"/>
+                <text x="330" y="302" fill="#7DD3FC" font-size="12.5" font-weight="700">3. 鎖定條件</text>
+                <text x="330" y="324" fill="#E2E8F0" font-size="11">先不急找答案，問它</text>
+                <text x="330" y="342" fill="#E2E8F0" font-size="11">「必須滿足什麼條件」</text>
+
+                <rect x="456" y="280" width="118" height="92" rx="6" fill="#0F766E"/>
+                <text x="468" y="302" fill="#FDE68A" font-size="12.5" font-weight="700">4. 重建解法</text>
+                <text x="468" y="324" fill="#fff" font-size="11">找滿足條件之物，</text>
+                <text x="468" y="342" fill="#fff" font-size="11">如自製＋回收一級</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card red">
+                <h4>類比思維 vs. 第一性原理</h4>
+                <ul class="mck-list">
+                  <li><strong>類比思維：</strong>看見別人賣千萬美元就認定火箭本來這麼貴，只能在價格與細節微調打轉。</li>
+                  <li><strong>第一性原理：</strong>砍掉中間商並回收佔整枚約 3/4 價格的一級火箭，透過複用攤薄固定成本。</li>
+                </ul>
+              </div>
+              <div class="mck-card gold">
+                <h4>三大哲學思想源流匯聚</h4>
+                <ul class="mck-list">
+                  <li><strong>亞里士多德：</strong>系統中存在無法由其他命題推導、不可違背或刪除的最基本前提。</li>
+                  <li><strong>蘇格拉底（助產術）：</strong>不給現成答案，用連續追問逼出對方自己想明白的本質。</li>
+                  <li><strong>《大學》：</strong>「物有本末，事有終始，知所先後，則近道矣。」</li>
+                </ul>
+              </div>
+              <div class="callout-navy">
+                <strong>本方法最難的一步：</strong>第 2 步「往下追問」——多數人停在別人給的表象名詞，唯有問到根，才擁有自由選擇的底氣。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》序言〈追問到根，自由選擇〉（含 SpaceX 公開數據）</span><span>Methodological Foundation</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 4: DIM 1A (#1-6) ==================== -->
+      <section class="slide" id="slide-4" data-kicker="一 · 自我與成長 (#1–#6)" data-title="別跟有限意志力硬扛：用習慣、物理隔離、情緒疏導與內驅立序"
+        data-note-conclusion="自我管理的前六條共同破除「硬扛意志力」迷思：自律靠習慣、專注靠放棄、情緒靠疏導接納、興趣靠無酬內驅、慎獨靠不自欺。"
+        data-note-evidence="#1 鮑邁斯特蘿蔔與巧克力實驗＆《掌控習慣》＆村上春樹作息；#2 杜威「我們從對經驗的反思中學習」＆曾子三省＆王陽明事上磨鍊；#3 喬布斯回蘋果把 300 多型號砍到 10 個；#4 韋格納白熊實驗＆ACT接納承諾療法＆大禹疏導治水；#5 德西實驗（給錢再撤錢，參與時間反短於無報酬組）；#6 《大學》毋自欺＆東漢楊震「四知」拒金。"
+        data-note-transition="打通自律與情緒底座後，第 5 頁處理現代人最痛的五題：中庸、反內耗、自我價值、鬆弛感與無為 (#7–#11)。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">03 · 維度一：自我與成長 A (#1–#6) <span class="archetype-badge">版型 6：六組本質對照表</span></div>
+            <h2 class="action-title">高能量自我秩序不靠咬牙硬扛，而在設計習慣、隔離誘惑、接納情緒與不自欺</h2>
+          </div>
+          <div class="slide-page-badge">P04 / 15</div>
+        </div>
+        <div class="slide-body">
+          <table class="mck-table">
+            <thead>
+              <tr>
+                <th style="width:14%;">議題</th>
+                <th style="width:20%;">第一性原理（是 X）</th>
+                <th style="width:16%;">常見誤區（不是 Y）</th>
+                <th style="width:28%;">關鍵實證與東西方印證</th>
+                <th style="width:22%;">立即可用最小行動</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#1 自律</strong></td>
+                <td class="hl">習慣（低能耗重複）</td>
+                <td>意志力硬撐</td>
+                <td>鮑邁斯特自我損耗實驗；村上春樹四點起床不用鬧鐘之數十年固定作息</td>
+                <td>目標拆成飯後 5 個俯臥撐，固定時間做滿 1 個月</td>
+              </tr>
+              <tr>
+                <td><strong>#2 成長</strong></td>
+                <td class="hl">反思（提煉養分）</td>
+                <td>堆疊經歷</td>
+                <td>杜威：不從經驗學，從對經驗的反思學；曾子吾日三省；王陽明事上磨鍊</td>
+                <td>每件事後記一句：這件事教會我什麼？贏在運氣或實力？</td>
+              </tr>
+              <tr>
+                <td><strong>#3 專注</strong></td>
+                <td class="hl">放棄（排除選項）</td>
+                <td>在誘惑旁剋制</td>
+                <td>逐二兔不得一兔；喬布斯回蘋果大砍 300 多型號至 10 個，決定不做更重要</td>
+                <td>手機移出房間關通知，只保留眼前唯一要事</td>
+              </tr>
+              <tr>
+                <td><strong>#4 情緒管理</strong></td>
+                <td class="hl">接納（疏導出口）</td>
+                <td>壓制控制</td>
+                <td>韋格納白熊實驗（越禁想越想）；大禹治水疏導勝鯀堵水；接納承諾療法 ACT</td>
+                <td>先為狀態命名（「我現在很生氣」），讓情緒自然流出</td>
+              </tr>
+              <tr>
+                <td><strong>#5 興趣</strong></td>
+                <td class="hl">內在驅動（樂之者）</td>
+                <td>短暫喜歡</td>
+                <td>德西實驗（中途給錢又撤錢，熱情反低於未領錢組）；孔子好之不如樂之者</td>
+                <td>自問：無人點贊也無報酬時，我還願投入精力嗎？</td>
+              </tr>
+              <tr>
+                <td><strong>#6 慎獨</strong></td>
+                <td class="hl">不自欺（對己誠實）</td>
+                <td>人後硬守規矩</td>
+                <td>《大學》毋自欺；東漢楊震「天知地知你知我知」拒深夜送金</td>
+                <td>獨處時自問：沒人看見我還這樣做嗎？不開第一個口子</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout-gold">
+            <strong>貫穿 #1–#6 的底層邏輯：</strong>意志力與剋制都是會枯竭的高耗能動作；真正穩固的自我秩序，是透過「習慣自動化、物理隔離、疏導接納與內在誠實」將摩擦降到最低。
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第一部分〈自我與成長〉第 1–6 節</span><span>Dimension 1A: Self-Regulation</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 5: DIM 1B (#7-11) ==================== -->
+      <section class="slide" id="slide-5" data-kicker="一 · 自我與成長 (#7–#11)" data-title="以實體行動終結大腦內耗，在控制二分法與順道而為中找回真鬆弛"
+        data-note-conclusion="內耗源自「拿想替代做」讓默認模式網絡 (DMN) 空轉；鬆弛感不是躺平，而是把「能控制的準備」與「不能控制的結果」徹底切分。"
+        data-note-evidence="#7 中庸非平庸，乃《中庸》執兩用中與亞里士多德黃金中道（勇氣介於魯莽與膽小之間）；#8 反內耗引《為學》窮富和尚、腦科學默認模式網絡 (DMN) 及卡里爾三步法（問最壞→接受→把力氣花在改善）；#9 阿德勒課題分離與孔子「人不知而不慍」；#10 2022 機場行李案例、愛比克泰德控制二分法、曾國藩莫問收穫；#11 老子治大國若烹小鮮、宋人拔苗助長、亞當·斯密看不見的手。"
+        data-note-transition="安頓好自我內在之後，第 6 頁進入第二維度「思維與認知」（#12–#19）：為什麼一年讀一百本書認知卻沒升級？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">04 · 維度一：自我與成長 B (#7–#11) <span class="archetype-badge">版型 8 + 6：控制矩陣與機制圖</span></div>
+            <h2 class="action-title">用「最小實體行動」切斷大腦 DMN 空轉，分清可控與不可控獲得真鬆弛</h2>
+          </div>
+          <div class="slide-page-badge">P05 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="反內耗行動橋與鬆弛感控制二分矩陣">
+                <text x="16" y="24" fill="#051C2C" font-size="14.5" font-weight="700">#8 反內耗機制：想與做脫節 ➔ DMN 空轉（《為學》＋卡里爾三步）</text>
+                <rect x="16" y="42" width="276" height="122" rx="8" fill="#FEF2F2" stroke="#FCA5A5"/>
+                <text x="32" y="68" fill="#B91C1C" font-size="13.5" font-weight="700">內耗迴圈：拿「想」替代「做」</text>
+                <text x="32" y="92" fill="#334155" font-size="12">• 富和尚籌劃僱船數年仍在原地</text>
+                <text x="32" y="112" fill="#334155" font-size="12">• 發呆空想激活默認模式網絡 (DMN)</text>
+                <text x="32" y="132" fill="#334155" font-size="12">• 想通是偽命題，越安全原地打轉越焦慮</text>
+
+                <rect x="308" y="42" width="276" height="122" rx="8" fill="#F0FDFA" stroke="#5EEAD4"/>
+                <text x="324" y="68" fill="#0F766E" font-size="13.5" font-weight="700">破局橋樑：卡里爾三步 ➔ 做通</text>
+                <text x="324" y="92" fill="#0F172A" font-size="12">1. 問最壞結果是什么？ 2. 接受最壞結果</text>
+                <text x="324" y="112" fill="#0F172A" font-size="12">3. 騰出腦力投入補救（窮和尚一瓶一缽赴南海）</text>
+                <text x="324" y="136" fill="#0F766E" font-size="12" font-weight="700">專注動手做小步 ➔ 直接壓低 DMN 活躍</text>
+
+                <!-- #10 Controllable vs Uncontrollable -->
+                <text x="16" y="196" fill="#051C2C" font-size="14.5" font-weight="700">#10 鬆弛感本質：把可控與不可控重新分開（愛比克泰德 ✕ 曾國藩）</text>
+                <rect x="16" y="212" width="276" height="172" rx="8" fill="#051C2C"/>
+                <text x="34" y="240" fill="#7DD3FC" font-size="13.5" font-weight="700">✓ 我能控制的（全力抓牢）</text>
+                <text x="34" y="266" fill="#E2E8F0" font-size="12">• 事前準備、行動態度、應對突發補救</text>
+                <text x="34" y="288" fill="#E2E8F0" font-size="12">• 曾國藩「但問耕耘」：訂正錯題、聯絡寄箱</text>
+                <text x="34" y="316" fill="#FBBF24" font-size="12" font-weight="700">真正鬆弛＝對能管的事負起全責</text>
+                <text x="34" y="340" fill="#94A3B8" font-size="11.5">反例：撒手不管嘴上隨緣＝「躺平逃避」</text>
+
+                <rect x="308" y="212" width="276" height="172" rx="8" fill="#FFFDF7" stroke="#F59E0B"/>
+                <text x="326" y="240" fill="#B45309" font-size="13.5" font-weight="700">✕ 我不能控制的（果斷鬆手）</text>
+                <text x="326" y="266" fill="#334155" font-size="12">• 別人點贊評價、孩子本次分數、上司批否</text>
+                <text x="326" y="288" fill="#334155" font-size="12">• 愛比克泰德：身體、財產、名譽非己決定</text>
+                <text x="326" y="316" fill="#B91C1C" font-size="12" font-weight="700">執念＝死盯管不了的結果 ➔ 越盯越慌</text>
+                <text x="326" y="340" fill="#475569" font-size="11.5">放下執念 ➔ 心裡平靜不與規律對抗</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>#7 中庸是恰到好處，不是平庸</h4>
+                <p>開會不表態推說「性格內向」是逃責的平庸；真中庸是「過猶不及」與亞里士多德黃金中道——在說話速度、情緒強弱上拿捏精準<strong>分寸感</strong>。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#9 自我價值是內在確認，不是外在認可</h4>
+                <p>他人嘴巴隨情緒起落；落實阿德勒「課題分離」與孔子「人不知而不慍」。列出 3 件自己做過但無人知曉的好事，拿回自我定價權。</p>
+              </div>
+              <div class="mck-card cyan">
+                <h4>#11 無為是不妄為，不是無所作為</h4>
+                <p>「無」是不要而非沒有。反對宋人拔苗助長式瞎用力；如老子「治大國若烹小鮮」與亞當·斯密「看不見的手」，看清事物規律後順勢而行。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第一部分〈自我與成長〉第 7–11 節</span><span>Dimension 1B: Inner Freedom</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 6: DIM 2 COGNITION (#12-19) ==================== -->
+      <section class="slide" id="slide-6" data-kicker="二 · 思維與認知 (#12–#19)" data-title="停止往舊框架填書：更新評價坐標、落實 24 小時最小應用與以目的定決策"
+        data-note-conclusion="認知升級不在讀了幾百本書，而在是否更換底層「框架」；學習與知行合一的檢驗標準只有一個：24 小時內能否變成手上動作與可複用規律。"
+        data-note-evidence="#12 哥白尼未增觀測數據，只將地球中心換為太陽中心，便取代托勒密 80 多個本輪；芒格警惕「手裡只有錘子看什麼都像釘子」。#13 韋伯祛魅＆荀子《解蔽》＆羅曼羅蘭：否定是另一種美化。#14 24 小時最小應用分水嶺；#15 孔子學而不思則罔＆閱讀三問；#16 《大學》知止而後有定＆巴菲特 20 孔打孔卡；#17 柳傳志覆盤四步＆豐田五問；#18 王陽明知是行之始＆行為激活療法；#19 懷特海《教育的目的》＆《學記》記問之學不足以為人師。"
+        data-note-transition="看清思考與認知工具後，第 7 頁進入第三維度「事業與成就」（#20–#25）：職場、管理與長期主義的本質是什麼？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">05 · 維度二：思維與認知 (#12–#19) <span class="archetype-badge">版型 5 + 6：框架躍遷與認知閉環</span></div>
+            <h2 class="action-title">資料不變、框架一換結論全變：以目的篩選項、以 24H 最小應用打通「知行一體」</h2>
+          </div>
+          <div class="slide-page-badge">P06 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-45-55">
+            <div class="svg-box">
+              <svg viewBox="0 0 510 400" xmlns="http://www.w3.org/2000/svg" aria-label="哥白尼框架置換與知行一體閉環">
+                <text x="16" y="24" fill="#051C2C" font-size="14" font-weight="700">#12 認知升級：換框架，不堆知識（哥白尼 vs 托勒密）</text>
+                <rect x="16" y="42" width="228" height="128" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+                <text x="30" y="68" fill="#475569" font-size="13" font-weight="700">舊框架裡拼命塞書</text>
+                <text x="30" y="92" fill="#334155" font-size="11.5">• 托勒密地心說疊加 80+ 本輪</text>
+                <text x="30" y="112" fill="#334155" font-size="11.5">• 讀幾十本 K 線書仍追漲殺跌</text>
+                <text x="30" y="132" fill="#B91C1C" font-size="11.5" font-weight="700">經驗越厚框架越死 ➔ 越學越虧</text>
+
+                <rect x="262" y="42" width="232" height="128" rx="8" fill="#051C2C"/>
+                <text x="276" y="68" fill="#FBBF24" font-size="13" font-weight="700">哥白尼式框架置換</text>
+                <text x="276" y="92" fill="#E2E8F0" font-size="11.5">• 同樣觀測數據，只換太陽為中心</text>
+                <text x="276" y="112" fill="#E2E8F0" font-size="11.5">• 80 本輪壓縮為一句話說透</text>
+                <text x="276" y="132" fill="#7DD3FC" font-size="11.5" font-weight="700">芒格：多學科模型替換單一錘子</text>
+
+                <!-- #14-#18 Action Loop -->
+                <text x="16" y="200" fill="#051C2C" font-size="14" font-weight="700">#14–#18 知識轉化能力四關卡（打通瀏覽與空想的鴻溝）</text>
+                <rect x="16" y="218" width="478" height="168" rx="10" fill="#FFFDF7" stroke="#F59E0B"/>
+                <text x="34" y="246" fill="#B45309" font-size="13" font-weight="700">1. 閱讀三問 (#15)：這節說什麼？對不對？我同意嗎？（防代思考）</text>
+                <text x="34" y="276" fill="#051C2C" font-size="13" font-weight="700">2. 24H 最小應用 (#14)：學完 24 小時內講一遍或真實場景用一次</text>
+                <text x="34" y="306" fill="#1E3A8A" font-size="13" font-weight="700">3. 知行一體 (#18)：行動才是知的完成形態（行為激活：先動再等情緒）</text>
+                <text x="34" y="336" fill="#0F766E" font-size="13" font-weight="700">4. 覆盤提煉規律 (#17)：柳傳志四步＋豐田五問 ➔ 寫出一條下次可用規則</text>
+                <text x="34" y="366" fill="#475569" font-size="11.5">註：拒絕流水帳日報（「上午開會下午改稿」），只留未來參照規則！</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="mck-card">
+                <h4>#13 祛魅是看清真實，不是全盤否定</h4>
+                <p>偶像或伴侶濾鏡碎裂後破口大罵，只是從「美化」掉入另一種「貶低」。依韋伯與荀子《解蔽》，去掉幻想看清真實本相仍願愛它，才是成熟底氣。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#16 決策是目的，不是選項優缺點表</h4>
+                <p>選項本身沒有答案。先依《大學》「知止而後有定」寫清當下唯一核心目的（金錢/成長/穩定），再像巴菲特「20 孔打孔卡」一樣按標準一秒篩掉不符選項。</p>
+              </div>
+              <div class="mck-card cyan">
+                <h4>#19 教育是培養能力，不是分數高低</h4>
+                <p>分數只抽樣「記憶與熟練」，抽不出解決無考綱問題的本事（《學記》記問之學不足為師；懷特海：掌握運用知識的藝術）。減半刷題時間做無標準答案實作。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第二部分〈思維與認知〉第 12–19 節</span><span>Dimension 2: Mental Models &amp; Execution</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 7: DIM 3 CAREER (#20-25) ==================== -->
+      <section class="slide" id="slide-7" data-kicker="三 · 事業與成就 (#20–#25)" data-title="職場只為外部成果付費：靠複利積累、成就他人、槓鈴反脆弱與合道匠心突圍"
+        data-note-conclusion="組織不存在內部成果，只為外部交付的價值買單；事業長青靠的不是苦熬時間或管死下屬，而是複利疊代、成就團隊、槓鈴抗波動與摸透事物規律的「合道」。"
+        data-note-evidence="#20 德魯克「成果全在組織外部」與《論語》君子務本；#21 1.01 的 365 次方約 37 倍、巴菲特溼雪長坡、貝索斯 1997 股東信把利潤投回物流與體驗；#22 德魯克讓長處發揮、老子太上下知有之、杜魯門桌牌「責任止於此」；#23 塔勒布 2012《反脆弱》三態、九頭蛇、肌肉微撕裂、槓鈴策略（極穩保底＋小額高風險試錯）；#24 艾森豪威爾四象限「重要不緊急」與柯維以終為始、時間押注；#25 莊子庖丁解牛 19 年不換刀（以神遇而不以目視）、小野二郎壽司。"
+        data-note-transition="看完事業與組織槓桿後，第 8 頁進入第四維度「財富與金錢」（#26–#30）：如何守住本金並將收入轉化為生錢資產？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">06 · 維度三：事業與成就 (#20–#25) <span class="archetype-badge">版型 2 + 8：事業六支柱與槓鈴圖</span></div>
+            <h2 class="action-title">沒有功勞的苦勞不值錢：以價值交付、複利疊代與反脆弱槓鈴驅動事業躍遷</h2>
+          </div>
+          <div class="slide-page-badge">P07 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="mck-card">
+              <h4>#20 職場＝價值交付（非苦勞）</h4>
+              <p><strong>誤區：</strong>把工時與抄送郵件當成果。<br><strong>本質：</strong>德魯克指出「成果全在組織外部」。每天自問從「忙不忙」改為「交出了什麼對客戶/同事有用的成果」。</p>
+            </div>
+            <div class="mck-card gold">
+              <h4>#21 長期主義＝複利（非熬時間）</h4>
+              <p><strong>誤區：</strong>把 1 年經驗重複用 10 年。<br><strong>本質：</strong>站在昨天肩膀疊加（1.01³⁶⁵≈37倍）；像巴菲特找「溼雪長坡」與貝索斯再投資，每天留下一點可複用沉澱。</p>
+            </div>
+            <div class="mck-card navy">
+              <h4>#22 管理＝成就他人（非管住人）</h4>
+              <p><strong>誤區：</strong>逐字改方案使下屬失能、主管過勞住院。<br><strong>本質：</strong>解決會做/願做/有資源三條件；老子「百姓皆謂我自然」，功勞歸夥伴、依杜魯門「責任止於此」擔責。</p>
+            </div>
+            <div class="mck-card">
+              <h4>#24 時間管理＝目標（非效率）</h4>
+              <p><strong>誤區：</strong>滿日程高效率卻做「緊急不重要」救火。<br><strong>本質：</strong>艾森豪威爾矩陣優先「重要但不緊急」，每天開工前花 20 分鐘對齊年度目標再時間押注。</p>
+            </div>
+            <div class="mck-card cyan">
+              <h4>#25 匠心＝合道（非熟能生巧）</h4>
+              <p><strong>誤區：</strong>錯誤方向重複二十年只是手熟。<br><strong>本質：</strong>如《莊子》庖丁一把刀用 19 年、小野二郎摸透魚米規律——先問決定好壞的「道」，練一次頂盲練十次。</p>
+            </div>
+            <div class="svg-box" style="padding:10px;">
+              <svg viewBox="0 0 360 190" xmlns="http://www.w3.org/2000/svg" aria-label="塔勒布反脆弱槓鈴策略">
+                <text x="10" y="20" fill="#051C2C" font-size="13" font-weight="700">#23 反脆弱＝從波動受益（槓鈴策略）</text>
+                <rect x="14" y="42" width="110" height="86" rx="8" fill="#051C2C"/>
+                <text x="69" y="72" text-anchor="middle" fill="#7DD3FC" font-size="13" font-weight="700">極穩保底端</text>
+                <text x="69" y="94" text-anchor="middle" fill="#E2E8F0" font-size="11">守住現金流與</text>
+                <text x="69" y="110" text-anchor="middle" fill="#E2E8F0" font-size="11">核心底氣不倒</text>
+
+                <rect x="124" y="78" width="112" height="16" fill="#CBD5E1"/>
+                <text x="180" y="70" text-anchor="middle" fill="#B91C1C" font-size="10.5" font-weight="700">忌全壓中間溫水檔</text>
+
+                <rect x="236" y="42" width="110" height="86" rx="8" fill="#D97706"/>
+                <text x="291" y="72" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">小額試錯端</text>
+                <text x="291" y="94" text-anchor="middle" fill="#FFFBEB" font-size="11">主動接納波動</text>
+                <text x="291" y="110" text-anchor="middle" fill="#FFFBEB" font-size="11">博非對稱躍遷</text>
+
+                <text x="14" y="156" fill="#334155" font-size="11">「風吹滅蠟燭，也能點燃山火」— 保底是為了</text>
+                <text x="14" y="174" fill="#334155" font-size="11">敢於在波動中長本事（九頭蛇/免疫系統邏輯）</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第三部分〈事業與成就〉第 20–25 節</span><span>Dimension 3: Value, Compounding &amp; Antifragility</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 8: DIM 4 WEALTH (#26-30) ==================== -->
+      <section class="slide" id="slide-8" data-kicker="四 · 財富與金錢 (#26–#30)" data-title="守住本金活下來、保障與理財分帳、並優先將工資流量轉化為生錢資產"
+        data-note-conclusion="財富領域五條核心全部打破表象誘惑：投資核心在先不虧本金；保險是互助分攤池非理財；財富衡量存量資產而非月薪高低。"
+        data-note-evidence="#26 虧損 50% 需翻倍回本，巴菲特兩條鐵律與 1969 年解散合夥基金，《孫子兵法》先為不可勝，四道防線（不懂不投/留生活費/分散/安全邊際）；#27 山下英子 2009《斷舍離》主角是人非物、莊子鷦鷯一枝；#28 科特勒《營銷管理》價值交換、同仁堂 1706 樂鳳鳴堂規；#29 2024 年國家金融監管總局交強險 3.72 億輛/保費 2710.6 億/賠付 2262.8 億/車均 762.5 元，平安人壽 2024 重疾件均賠僅約 8 萬，返還型保費為消費型 2 倍且保障低一半、前 5 年退保現金價值不足 20-30%，引隋朝長孫平義倉；#30 月薪 3 萬月光族 vs 月賺 5 千有三套房老張、《富爸爸窮爸爸》與《史記·貨殖列傳》以末致財用本守之。"
+        data-note-transition="打理好事業與財富後，第 9 頁起進入第五維度「關係與情感」（#31–#40）。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">07 · 維度四：財富與金錢 (#26–#30) <span class="archetype-badge">版型 1 + 6：數據對照與四防線</span></div>
+            <h2 class="action-title">先守本金與真實價值交換：把「月薪流量」優先轉換為睡覺也在生錢的「資產存量」</h2>
+          </div>
+          <div class="slide-page-badge">P08 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="保險互助本質對比與財富流量存量轉換">
+                <text x="16" y="24" fill="#051C2C" font-size="14" font-weight="700">#29 保險實證對比：消費型互助保障 vs. 返還型「理財」陷阱</text>
+                <rect x="16" y="42" width="568" height="156" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="32" y="66" fill="#1E3A8A" font-size="12.5" font-weight="700">2024 實證數據：返還型重疾險同保額總保費是消費型的 2 倍！</text>
+                <rect x="32" y="84" width="250" height="44" rx="6" fill="#051C2C"/>
+                <text x="44" y="104" fill="#7DD3FC" font-size="12" font-weight="700">純消費型保險（回歸大數互助池）</text>
+                <text x="44" y="120" fill="#E2E8F0" font-size="11">保費低一半 ➔ 買足治療大病兜底保額</text>
+
+                <rect x="304" y="84" width="264" height="44" rx="6" fill="#FEF2F2" stroke="#FCA5A5"/>
+                <text x="316" y="104" fill="#B91C1C" font-size="12" font-weight="700">返還型保險（兼顧返本反兩頭空）</text>
+                <text x="316" y="120" fill="#475569" font-size="11">同保費保額低一半＋前5年退保僅返20–30%</text>
+
+                <text x="32" y="154" fill="#334155" font-size="11.5">• 平安人壽 2024 重疾件均賠僅約 8 萬元（多數人為返本壓低了保額）</text>
+                <text x="32" y="174" fill="#334155" font-size="11.5">• 2024 交強險 3.72 億輛車均保費 762.5 元互助分攤；隋朝長孫平「義倉」同理</text>
+
+                <!-- #30 Flow vs Stock -->
+                <text x="16" y="226" fill="#051C2C" font-size="14" font-weight="700">#30 財富本質：月薪是流量，能生錢的資產才是存量</text>
+                <rect x="16" y="242" width="568" height="142" rx="10" fill="#051C2C"/>
+                <rect x="34" y="262" width="160" height="96" rx="8" fill="#132E52"/>
+                <text x="114" y="290" text-anchor="middle" fill="#CBD5E1" font-size="13" font-weight="700">月薪收入（流量）</text>
+                <text x="114" y="314" text-anchor="middle" fill="#94A3B8" font-size="11">停工即斷・花光歸零</text>
+                <text x="114" y="334" text-anchor="middle" fill="#FCA5A5" font-size="11">例：月薪3萬房車貸月光</text>
+
+                <line x1="202" y1="310" x2="254" y2="310" stroke="#FBBF24" stroke-width="3"/>
+                <polygon points="254,304 266,310 254,316" fill="#FBBF24"/>
+                <text x="230" y="296" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="700">先轉存</text>
+
+                <rect x="270" y="262" width="296" height="96" rx="8" fill="#1E3A8A" stroke="#F59E0B"/>
+                <text x="288" y="290" fill="#FBBF24" font-size="13.5" font-weight="700">生錢資產（存量 / 果樹）</text>
+                <text x="288" y="314" fill="#FFFFFF" font-size="11.5">股息、租金、自運轉生意（睡覺也在生錢）</text>
+                <text x="288" y="336" fill="#7DD3FC" font-size="11.5">鐵律：先買資產再消費（《史記》用本守之）</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>#26 投資是風險控制，不是高回報</h4>
+                <p>虧 50% 須翻倍回本。守住巴菲特兩條鐵律與<strong>四道防線</strong>：① 不懂不投 ② 備足生活費不影響生活 ③ 分散配置 ④ 價格遠低於價值的安全邊際。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#27 斷舍離是留下重要，不是扔東西</h4>
+                <p>只比誰扔得多，購物車很快又滿。核心是以山下英子「當下有用與心動」篩出真正重要物件，主角是人而非伺候物品。</p>
+              </div>
+              <div class="mck-card cyan">
+                <h4>#28 營銷是價值交換，不是定位噱頭</h4>
+                <p>廣告佔心智只是放大器；同仁堂 1706 年「炮製雖繁必不敢省人工」與科特勒核心指出：先替顧客真解決問題，交換才成立。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第四部分〈財富與金錢〉第 26–30 節（含 2024 保險公開統計）</span><span>Dimension 4: Capital Preservation &amp; Assets</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 9: DIM 5A RELATIONSHIPS (#31-35) ==================== -->
+      <section class="slide" id="slide-9" data-kicker="五 · 關係與情感 A (#31–#35)" data-title="關係的根基不是浪漫、報班或千人點贊，而是責任、承諾、陪伴與五人深圈"
+        data-note-conclusion="人際關係前五條揭示：所有長久親密與社群支持的底座都不是熱鬧或情緒激情，而是不可外包的責任、陪伴與有限精力聚焦少數高品質深交。"
+        data-note-evidence="#31 《詩經》死生契闊與婚禮誓言；#32 斯滕伯格 1986 愛情三角（親密、激情、承諾，缺承諾僅叫浪漫的愛）、《上邪》與秦觀《鵲橋仙》；#33 父母牽絆只有十幾年，技能可外包報班而安全感不能外包，鮑爾比依戀安全基地理論與《顏氏家訓》骨肉之愛不可以簡；#34 亞里士多德《尼各馬可倫理學》三類友誼（有用/好玩/認同人格）、管仲鮑叔牙、莊子淡如水；#35 鄧巴數 150 人（核心貼心僅 5 人→15人→50人）、二八定律、孟嘗君三千食客走盡僅馮諼留。"
+        data-note-transition="看懂親密與社群結構後，第 10 頁處理關係中的進階難題：識人、原生家庭、追問、邊界感與情緒價值 (#36–#40)。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">08 · 維度五：關係與情感 A (#31–#35) <span class="archetype-badge">版型 2 + 7：結構三角與鄧巴圈層</span></div>
+            <h2 class="action-title">親密與人脈的穩定靠「承諾、陪伴與深度」：把有限心力投給核心五人圈</h2>
+          </div>
+          <div class="slide-page-badge">P09 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-45-55">
+            <div class="svg-box">
+              <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" aria-label="斯滕伯格愛情三角與鄧巴數社交圈層">
+                <text x="16" y="24" fill="#051C2C" font-size="14" font-weight="700">#32 斯滕伯格愛情三角 &amp; #35 鄧巴數社交同心圓</text>
+                <!-- Triangle -->
+                <rect x="16" y="40" width="488" height="162" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <polygon points="150,62 65,176 235,176" fill="#E0F2FE" stroke="#1E3A8A" stroke-width="2"/>
+                <text x="150" y="56" text-anchor="middle" fill="#1E3A8A" font-size="12" font-weight="700">親密</text>
+                <text x="52" y="192" text-anchor="middle" fill="#64748B" font-size="12" font-weight="700">激情（易冷）</text>
+                <text x="242" y="192" text-anchor="middle" fill="#B45309" font-size="12.5" font-weight="800">承諾（根基★）</text>
+                <text x="285" y="92" fill="#051C2C" font-size="12.5" font-weight="700">缺「承諾」的愛叫「浪漫的愛」</text>
+                <text x="285" y="116" fill="#475569" font-size="11.5">• 浪漫是甜美外殼，終會消逝</text>
+                <text x="285" y="138" fill="#475569" font-size="11.5">• 承諾是低谷/變老仍坐回同桌</text>
+                <text x="285" y="160" fill="#B45309" font-size="11.5" font-weight="700">• 秦觀：兩情若是久長時…</text>
+
+                <!-- Dunbar circles -->
+                <rect x="16" y="216" width="488" height="170" rx="8" fill="#051C2C"/>
+                <circle cx="140" cy="302" r="74" fill="none" stroke="#475569" stroke-dasharray="4,3"/>
+                <circle cx="140" cy="302" r="56" fill="none" stroke="#64748B"/>
+                <circle cx="140" cy="302" r="38" fill="#132E52" stroke="#00A9F4"/>
+                <circle cx="140" cy="302" r="20" fill="#D97706"/>
+                <text x="140" y="306" text-anchor="middle" fill="#fff" font-size="11" font-weight="800">5人</text>
+                <text x="140" y="275" text-anchor="middle" fill="#7DD3FC" font-size="10">15</text>
+                <text x="140" y="256" text-anchor="middle" fill="#94A3B8" font-size="10">50</text>
+                <text x="140" y="236" text-anchor="middle" fill="#CBD5E1" font-size="10">150 上限</text>
+
+                <text x="242" y="250" fill="#FBBF24" font-size="13.5" font-weight="700">#35 鄧巴數 × 二八定律</text>
+                <text x="242" y="276" fill="#E2E8F0" font-size="12">• 大腦穩定關係上限約 150 人</text>
+                <text x="242" y="298" fill="#E2E8F0" font-size="12">• 最貼心核心層僅約 <tspan fill="#FBBF24" font-weight="700">5 個人</tspan></text>
+                <text x="242" y="320" fill="#E2E8F0" font-size="12">• 孟嘗君食客三千散盡，唯馮諼留</text>
+                <text x="242" y="344" fill="#7DD3FC" font-size="11.5">➔ 砍掉無效酒桌應酬，深耕少數摯友</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>#31 家庭是責任，不是對錯</h4>
+                <p>家裡沒有法官，贏了辯論只會輸掉關係。吵架時先停翻舊賬，改問「為了這個家繼續過下去，我現在能承擔什麼（倒杯水、先讓步）」。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#33 親子是陪伴，不是報班</h4>
+                <p>技能可外包培訓班，鮑爾比「安全基地」只有父母能給。坐在客廳刷手機不算陪；砍掉過密興趣班，孩子說話時眼睛看著他認真聽。</p>
+              </div>
+              <div class="mck-card cyan">
+                <h4>#34 友情是靠得住，不是玩得來</h4>
+                <p>亞里士多德分三類友誼：圖有用、圖好玩、認同人格本身。如管仲與鮑叔牙，真正的朋友不在順境酒桌熱乎，而在跌倒借錢生病時伸手。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第五部分〈關係與情感〉第 31–35 節</span><span>Dimension 5A: Commitments &amp; Core Ties</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 10: DIM 5B (#36-40) ==================== -->
+      <section class="slide" id="slide-10" data-kicker="五 · 關係與情感 B (#36–#40)" data-title="在兩難代價中看人品、分清你我邊界，並以「先接納情緒」給出真正的情緒價值"
+        data-note-conclusion="關係進階五題全部指向「去表象、定邊界、真實承接」：不聽承諾聽代價、不怪父母認清可塑性、不靠話術靠分清課題、不急著哄而是先承認對方痛苦是真的。"
+        data-note-evidence="#36 薩繆爾森「顯示性偏好」（拿真金白銀與時間怎麼選）＆孔子「歲寒然後知松柏之後凋」；#37 神經可塑性、阿德勒目的論（出生病弱差等生卻創個體心理學）＆北宋歐陽修母以蘆葦畫沙識字；#38 《中庸》學問思辨行、笛卡爾普遍懷疑「我思故我在」、豐田五問、防 AI 變淺；#39 克勞德《過猶不及》身體/心理/情緒「可呼吸柵欄」＆岸見一郎《被討厭的勇氣》課題分離；#40 戈特曼「情緒協調」、羅傑斯無條件積極關注（共情 vs 同情）、海底撈等候服務與一句道歉。"
+        data-note-transition="看清自我、思維、事業、財富與關係之後，第 11 頁回到物理載體：第六維度「健康與身體」（#41–#45）。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">09 · 維度五：關係與情感 B (#36–#40) <span class="archetype-badge">版型 2 + 6：關係進階五維</span></div>
+            <h2 class="action-title">看穿表層話術與越界纏繞：以「代價識人、課題分界、情緒接納」重構高品質互動</h2>
+          </div>
+          <div class="slide-page-badge">P10 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="mck-card">
+                <h4>#36 識人看人品，不是聽言語</h4>
+                <p>薩繆爾森「顯示性偏好」：嘴上承諾零成本，兩難時刻的真實代價（利益面前讓不讓、出錯認不認、對無用之人客不客氣）才顯露真實人品（歲寒知松柏）。</p>
+              </div>
+              <div class="mck-card">
+                <h4>#37 原生家庭是起點，不是宿命</h4>
+                <p>童年給予自我認知、關係模板與情緒反應三項初始參數，但大腦有神經可塑性。依阿德勒目的論三步破局：<strong>認下起點 ➔ 區分舊模板 ➔ 用自主選擇重新養育自己</strong>。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#38 提問是追問，不是要答案</h4>
+                <p>AI 一秒給百條答案反而讓思維變淺。學笛卡爾懷疑與豐田五問法：拿到回答後再追問原因與前提，向內追問「我為何這樣想」才是最高階提問。</p>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="svg-box" style="flex:1;">
+                <svg viewBox="0 0 540 245" xmlns="http://www.w3.org/2000/svg" aria-label="邊界感可呼吸柵欄與課題分離">
+                  <text x="14" y="22" fill="#051C2C" font-size="13.5" font-weight="700">#39 邊界感＝分清你我（克勞德可呼吸柵欄 ✕ 課題分離）</text>
+                  <rect x="14" y="38" width="230" height="190" rx="8" fill="#051C2C"/>
+                  <text x="129" y="64" text-anchor="middle" fill="#7DD3FC" font-size="13" font-weight="700">我的課題（我做主擔責）</text>
+                  <text x="28" y="92" fill="#E2E8F0" font-size="11.5">• 身體界限：保護身體不越界</text>
+                  <text x="28" y="114" fill="#E2E8F0" font-size="11.5">• 心理界限：想法與選擇權歸我</text>
+                  <text x="28" y="136" fill="#E2E8F0" font-size="11.5">• 情緒界限：我的時間與原則</text>
+                  <text x="28" y="172" fill="#FBBF24" font-size="11.5" font-weight="700">分清你我後，「幫不了」</text>
+                  <text x="28" y="190" fill="#FBBF24" font-size="11.5" font-weight="700">不須背話術自然脫口而出</text>
+
+                  <line x1="270" y1="42" x2="270" y2="224" stroke="#D97706" stroke-width="3" stroke-dasharray="6,4"/>
+                  <text x="270" y="238" text-anchor="middle" fill="#B45309" font-size="10.5" font-weight="700">可呼吸柵欄：善進・惡擋</text>
+
+                  <rect x="296" y="38" width="230" height="190" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                  <text x="411" y="64" text-anchor="middle" fill="#475569" font-size="13" font-weight="700">別人的課題（不越權插手）</text>
+                  <text x="310" y="92" fill="#334155" font-size="11.5">• 好友的戀愛衝突（案例）</text>
+                  <text x="310" y="114" fill="#334155" font-size="11.5">• 他人的期待、評價與焦慮</text>
+                  <text x="310" y="136" fill="#334155" font-size="11.5">• 己所不欲，勿施於人</text>
+                  <text x="310" y="172" fill="#B91C1C" font-size="11.5" font-weight="700">忌：未分歸屬只練拒絕，</text>
+                  <text x="310" y="190" fill="#B91C1C" font-size="11.5" font-weight="700">變成該擔責的推、不該拒的拒</text>
+                </svg>
+              </div>
+              <div class="mck-card navy">
+                <h4>#40 情緒價值是接納情緒，不是哄人開心</h4>
+                <p>一句「別想那麼多去散步」直接否決了對方委屈。先壓住給建議的衝動，接一句<strong>「換作誰都會難受」</strong>（戈特曼情緒協調＆羅傑斯共情），待情緒落地再談解方。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第五部分〈關係與情感〉第 36–40 節</span><span>Dimension 5B: Discernment, Boundaries &amp; Empathy</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 11: DIM 6 HEALTH (#41-45) ==================== -->
+      <section class="slide" id="slide-11" data-kicker="六 · 健康與身體 (#41–#45)" data-title="健康是三維活力：守住熱量缺口、460nm 藍光生物鐘、均衡三餐與長期可持續運動"
+        data-note-conclusion="身體健康的五條原理全部指向物理能量與生物節律：熱量進少出多才會減脂、晝夜節律比睡幾小時關鍵、營養網靠雜食而非補藥、運動靠恢復期持續積累。"
+        data-note-evidence="#41 扁鵲三兄弟「治未病」與 WHO 生理/心理/社會三維定義；#42 跑 5km 約耗 300kcal，喝一杯奶茶補回數百kcal，成年女性躺著基礎代謝 1200-1300kcal，一碗米飯兩百多kcal需跑20分、奶油蛋糕需跑40分（七分吃三分練）；#43 晚上十點開始分泌褪黑素、凌晨兩三點最高峰，手機 460-480nm 藍光看 2 小時使褪黑素減半且入睡推後 1.5 小時，MRI 顯示作息不規律者大腦注意判斷連接較差；#44 《黃帝內經》五穀為養及膳食指南每日 ≥12 種／每週 ≥25 種食物；#45 華佗五禽戲「不當使極」與吳普九十歲耳聰牙固，WHO 建議每週 150 分鐘中等強度或 75 分鐘高強度。"
+        data-note-transition="照顧好身體這個載體後，第 12 頁攀上本書最高層：第七維度「人生與意義」（#46–#50）。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">10 · 維度六：健康與身體 (#41–#45) <span class="archetype-badge">版型 1 + 2：生理節律與能量帳本</span></div>
+            <h2 class="action-title">破除「保健品、猛跑與補眠」迷思：順應能量守恆與生物鐘的五項日常鐵律</h2>
+          </div>
+          <div class="slide-page-badge">P11 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="減肥能量缺口與睡前藍光對褪黑素影響">
+                <text x="16" y="24" fill="#051C2C" font-size="14" font-weight="700">#42 減肥能量帳本：吃進遠快於練出（七分吃・三分練）</text>
+                <rect x="16" y="40" width="568" height="148" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="32" y="64" fill="#334155" font-size="12" font-weight="700">跑 5 公里消耗 ≈ 300 kcal</text>
+                <rect x="235" y="50" width="120" height="20" rx="4" fill="#0F766E"/>
+                <text x="364" y="64" fill="#0F766E" font-size="11.5" font-weight="700">運動僅佔總消耗小頭（基礎代謝為主）</text>
+
+                <text x="32" y="96" fill="#334155" font-size="12" font-weight="700">一塊炸雞 / 一杯奶茶 ≈ 300–400+ kcal</text>
+                <rect x="275" y="82" width="150" height="20" rx="4" fill="#D97706"/>
+                <text x="434" y="96" fill="#B45309" font-size="11.5" font-weight="700">跑步成果一口歸零</text>
+
+                <text x="32" y="128" fill="#334155" font-size="12" font-weight="700">一頓火鍋 ≈ 1,000+ kcal</text>
+                <rect x="235" y="114" width="325" height="20" rx="4" fill="#B91C1C"/>
+
+                <text x="32" y="168" fill="#051C2C" font-size="11.5" font-weight="700">解法：減含糖飲料 ➔ 先吃菜肉後吃主食 ➔ 不拿運動當大餐獎勵</text>
+
+                <!-- #43 Melatonin -->
+                <text x="16" y="216" fill="#051C2C" font-size="14" font-weight="700">#43 睡眠是規律，不是時長（晝夜節律 &amp; 460–480nm 藍光實驗）</text>
+                <rect x="16" y="232" width="568" height="156" rx="10" fill="#051C2C"/>
+                <text x="36" y="258" fill="#7DD3FC" font-size="12.5" font-weight="700">正常生物鐘：22:00 分泌褪黑素 ➔ 02:00–03:00 達高峰 ➔ 天亮消失</text>
+                <!-- curve -->
+                <path d="M 45,356 Q 160,350 220,284 Q 270,264 340,352" fill="none" stroke="#00A9F4" stroke-width="3"/>
+                <path d="M 45,356 Q 210,356 285,324 Q 340,316 400,356" fill="none" stroke="#FCA5A5" stroke-width="2.5" stroke-dasharray="5,4"/>
+                <text x="200" y="274" fill="#7DD3FC" font-size="10.5">無藍光高峰</text>
+                <text x="310" y="314" fill="#FCA5A5" font-size="10.5">睡前看屏 2h：減半＋延後 1.5h</text>
+
+                <text x="410" y="294" fill="#FBBF24" font-size="12" font-weight="700">撥正時鐘三動作：</text>
+                <text x="410" y="316" fill="#E2E8F0" font-size="11.5">1. 先固定起床時間</text>
+                <text x="410" y="336" fill="#E2E8F0" font-size="11.5">2. 晨起開簾曬太陽</text>
+                <text x="410" y="356" fill="#E2E8F0" font-size="11.5">3. 睡前 1 小時調暗遠屏</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>#41 健康是身心愉悅，不是不生病</h4>
+                <p>指標正常卻疲倦失眠叫「亞健康」。WHO 定義健康須含生理、心理與社會聯結三維；效法扁鵲大哥「治未病」，每日追蹤晨起活力與心情而非只看體檢單。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#44 飲食是均衡，不是進補</h4>
+                <p>保健品只是網破時的補丁，三餐才是整張營養網。《黃帝內經》五穀為養；膳食指南規定<strong>每天 ≥12 種、每週 ≥25 種食材</strong>，明確缺乏才在醫囑下針對補。</p>
+              </div>
+              <div class="mck-card teal">
+                <h4>#45 運動是長期可持續，不是強度</h4>
+                <p>身體變強發生在訓練後的恢復期。華佗「不當使極」讓吳普活到九十歲；WHO 建議每週 150 分鐘中等強度，選每天快走 20 分鐘不傷膝蓋最能長期複利。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第六部分〈健康與身體〉第 41–45 節</span><span>Dimension 6: Energy Balance &amp; Circadian Rhythm</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 12: DIM 7 MEANING (#46-50) ==================== -->
+      <section class="slide" id="slide-12" data-kicker="七 · 人生與意義 (#46–#50)" data-title="跳出享樂跑步機與選擇悖論，以意義、心流與內在一致抵達選擇自由"
+        data-note-conclusion="物質只能帶來三個月的短暫快樂（享樂跑步機）；持久幸福源自可控制的四成空間（意義與溫暖關係），而人生自由的終極定義是在看透本質後能自主做主。"
+        data-note-evidence="#46 塞利格曼幸福公式 H=S+C+V（柳博米爾斯基估計先天 50%、環境僅 10%、可控達 40%）；1978 布里克曼彩票得主與癱瘓者對照研究；哈佛大學 1938 年起追蹤七百多人八十年（瓦爾丁格）：溫暖關係勝過金錢地位；弗蘭克爾三條意義之路；#47 契克森米哈賴 1975/1990《心流》挑戰匹配技能與莊子粘蟬老人；#48 馬斯洛需求五層＆約拿情結（害怕自身潛能）＆阿德勒追求優越 vs 社會興趣；#49 費斯廷格 1957 認知失調實驗、榮格人格面具、蘇格拉底飲鴆守一致；#50 巴里·施瓦茨《選擇悖論》：超市 24 種果醬購買率僅 3% vs 6 種果醬達 30%，追求最優者起薪雖高 20% 滿意度卻更低，喬布斯固定穿衣減決策焦慮；孔子七十從心所欲不逾矩、莊子無待、伯林兩種自由。"
+        data-note-transition="50 條人生原理至此全部呈現完畢。第 13 頁我們來看它們如何收斂成一個統一的底層閉環。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">11 · 維度七：人生與意義 (#46–#50) <span class="archetype-badge">版型 1 + 8：實證模型與心流通道</span></div>
+            <h2 class="action-title">破除「享樂跑步機」與「24 種果醬焦慮」：在意義、心流與三維自洽中贏得選擇自由</h2>
+          </div>
+          <div class="slide-page-badge">P12 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="svg-box">
+              <svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" aria-label="幸福公式占比與心流及選擇悖論實證">
+                <text x="16" y="24" fill="#051C2C" font-size="14" font-weight="700">#46 幸福公式 H = S + C + V（環境僅 10%，個人可控達 40%）</text>
+                <rect x="16" y="38" width="528" height="46" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <rect x="28" y="48" width="250" height="26" fill="#64748B"/>
+                <text x="153" y="65" text-anchor="middle" fill="#fff" font-size="11.5" font-weight="700">先天遺傳 S ≈ 50%</text>
+                <rect x="278" y="48" width="52" height="26" fill="#94A3B8"/>
+                <text x="304" y="65" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="700">環境 10%</text>
+                <rect x="330" y="48" width="202" height="26" fill="#D97706"/>
+                <text x="431" y="65" text-anchor="middle" fill="#fff" font-size="11.5" font-weight="700">個人可控 V ≈ 40% ★</text>
+
+                <!-- Flow chart -->
+                <text x="16" y="112" fill="#051C2C" font-size="14" font-weight="700">#47 心流＝投入（挑戰略高於現有技能）</text>
+                <rect x="16" y="126" width="260" height="145" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <line x1="42" y1="252" x2="255" y2="252" stroke="#475569" stroke-width="1.5"/>
+                <line x1="42" y1="252" x2="42" y2="140" stroke="#475569" stroke-width="1.5"/>
+                <polygon points="42,252 225,142 252,165 72,252" fill="#E0F2FE" stroke="#00A9F4"/>
+                <text x="88" y="168" fill="#B91C1C" font-size="11.5" font-weight="700">太難 ➔ 焦慮</text>
+                <text x="150" y="205" fill="#0369A1" font-size="12" font-weight="800" transform="rotate(-28 150 205)">心流通道</text>
+                <text x="180" y="242" fill="#64748B" font-size="11.5" font-weight="700">太易 ➔ 無聊</text>
+
+                <!-- Choice paradox -->
+                <text x="292" y="112" fill="#051C2C" font-size="14" font-weight="700">#50 選擇悖論：果醬購買率</text>
+                <rect x="292" y="126" width="252" height="145" rx="8" fill="#051C2C"/>
+                <text x="310" y="156" fill="#CBD5E1" font-size="12">提供 24 種口味果醬：</text>
+                <rect x="310" y="166" width="22" height="20" rx="3" fill="#94A3B8"/>
+                <text x="340" y="181" fill="#FCA5A5" font-size="12.5" font-weight="700">購買率僅 3%</text>
+                <text x="310" y="212" fill="#CBD5E1" font-size="12">精簡為 6 種口味果醬：</text>
+                <rect x="310" y="222" width="170" height="20" rx="3" fill="#F59E0B"/>
+                <text x="488" y="237" fill="#FBBF24" font-size="13" font-weight="800">30%!</text>
+
+                <rect x="16" y="286" width="528" height="100" rx="8" fill="#FFFDF7" stroke="#F59E0B"/>
+                <text x="32" y="312" fill="#B45309" font-size="13" font-weight="700">#46 哈佛 80 年追蹤（1938 起 700+ 人）結論：</text>
+                <text x="32" y="336" fill="#0F172A" font-size="12">讓人過得舒坦的不是金錢地位（月薪翻十倍爽感僅維持 3 個月），</text>
+                <text x="32" y="358" fill="#0F172A" font-size="12">而是溫暖人際關係＋弗蘭克爾三路意義（關愛他人/創造價值/勇對苦難）。</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>#48 自我實現是成為自己，不是變優秀</h4>
+                <p>「變優秀」拿社會外部標準無限攀比；成為自己是把內在潛能活出來（克服逃避使命的「約拿情結」）。每天留一段「不打卡、不給人看」的時間給順手熱愛之事。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>#49 自洽是內在一致，不是自我和解</h4>
+                <p>嘴說「放下了」轉頭醉酒，只是情緒止痛藥。費斯廷格認知失調理論指出：唯有<strong>認知、情感、行為三樣對得上</strong>（如蘇格拉底拒逃守一致），面具才不再勒痛自己。</p>
+              </div>
+              <div class="mck-card navy">
+                <h4>#50 自由是能選擇，不是沒人管</h4>
+                <p>受制於手機與惰性的人就算沒人管也不自由。伯林區分「無限制」與「成為自己主人」；孔子七十從心所欲不逾矩——看透前面 49 條本質，才擁有不被選項綁架的真自由。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》第七部分〈人生與意義〉第 46–50 節</span><span>Dimension 7: Meaning, Flow &amp; Autonomy</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 13: SYNTHESIS ==================== -->
+      <section class="slide" id="slide-13" data-kicker="全書邏輯收斂" data-title="50 條原理收斂為一條黃金主幹：追問出本質，方得選擇自由"
+        data-note-conclusion="第 1 至 49 條示範了不同領域的剝離過程，第 50 條揭曉最終總答案：人生苦於亂選，唯有習慣追問到根，方能自主選擇。"
+        data-note-evidence="從自我控制二分、認知框架、價值交付、風控資產、邊界接納到能量節律，全部都在做同一件事——撕掉社會流行定義，找到「不可再分的條件」，把注意力從「選項挑花眼」拉回「核心目的與必要條件」。"
+        data-note-transition="第 14 頁提煉團隊與個人今日即可落地的五大高槓桿切換動作。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">12 · 全書論證收斂 <span class="archetype-badge">版型 3：收斂歸納金字塔</span></div>
+            <h2 class="action-title">50 個生活難題的最終答案高度一致：看透底層本質，就能在任何選項前自由取捨</h2>
+          </div>
+          <div class="slide-page-badge">P13 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="svg-box" style="flex:1;">
+            <svg viewBox="0 0 1120 390" xmlns="http://www.w3.org/2000/svg" aria-label="七大維度收斂至自由選擇金字塔">
+              <rect x="200" y="16" width="720" height="68" rx="10" fill="#051C2C"/>
+              <text x="560" y="45" text-anchor="middle" fill="#FBBF24" font-size="16.5" font-weight="700">終極歸宿 (#50)：真正的自由 ＝ 看透本質後「成為自己主人」的選擇能力</text>
+              <text x="560" y="69" text-anchor="middle" fill="#CBD5E1" font-size="12">不被他人點贊、表層話術、AI 上百條建議與過多選項綁架（從心所欲不逾矩）</text>
+
+              <line x1="250" y1="115" x2="400" y2="88" stroke="#D97706" stroke-width="2.5"/>
+              <line x1="560" y1="115" x2="560" y2="88" stroke="#D97706" stroke-width="2.5"/>
+              <line x1="870" y1="115" x2="720" y2="88" stroke="#D97706" stroke-width="2.5"/>
+
+              <rect x="36" y="118" width="330" height="126" rx="10" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="2"/>
+              <text x="54" y="146" fill="#1E3A8A" font-size="14" font-weight="700">內核層：自我、認知與意義</text>
+              <text x="54" y="170" fill="#334155" font-size="12">• 習慣＋行動＋控制二分法安頓自己 (#1–#11)</text>
+              <text x="54" y="192" fill="#334155" font-size="12">• 換框架＋定目的看清真實 (#12–#19)</text>
+              <text x="54" y="214" fill="#B45309" font-size="12" font-weight="700">• 意義＋心流＋三維自洽託底人生 (#46–#49)</text>
+
+              <rect x="395" y="118" width="330" height="126" rx="10" fill="#FFFDF7" stroke="#D97706" stroke-width="2"/>
+              <text x="413" y="146" fill="#B45309" font-size="14" font-weight="700">交換層：事業、財富與身體</text>
+              <text x="413" y="170" fill="#334155" font-size="12">• 外部價值交付＋複利＋反脆弱槓鈴 (#20–#25)</text>
+              <text x="413" y="192" fill="#334155" font-size="12">• 風控護本＋互助保險＋生錢資產 (#26–#30)</text>
+              <text x="413" y="214" fill="#0F766E" font-size="12" font-weight="700">• 熱量缺口＋生物鐘＋可持續運動 (#41–#45)</text>
+
+              <rect x="754" y="118" width="330" height="126" rx="10" fill="#E0F2FE" stroke="#00A9F4" stroke-width="2"/>
+              <text x="772" y="146" fill="#0369A1" font-size="14" font-weight="700">聯結層：關係與邊界契約</text>
+              <text x="772" y="170" fill="#0F172A" font-size="12">• 責任・承諾・不可外包的陪伴 (#31–#33)</text>
+              <text x="772" y="192" fill="#0F172A" font-size="12">• 靠得住摯友與鄧巴 5 人深圈 (#34–#35)</text>
+              <text x="772" y="214" fill="#051C2C" font-size="12" font-weight="700">• 顯性偏好識人＋分清你我＋接納情緒 (#36–#40)</text>
+
+              <rect x="36" y="268" width="1048" height="102" rx="10" fill="#F1F5F9" stroke="#CBD5E1"/>
+              <text x="58" y="298" fill="#051C2C" font-size="14" font-weight="700">為什麼「追問到根」能一次解決 50 個貌似無關的問題？</text>
+              <text x="58" y="324" fill="#334155" font-size="12.5">因為人的痛苦幾乎都源自「把手段當目的、把外殼當本質」：把刷題分數當能力、把加班苦勞當價值、把返還保費當保障、把嘴上哄人當情緒價值、把沒人管當自由。</text>
+              <text x="58" y="348" fill="#B45309" font-size="12.5" font-weight="700">只要把「這件事的第一性原理是什麼」變成日常反射動作，迷霧散去，選擇自然清晰。</text>
+            </svg>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》全書 1–50 條邏輯統合</span><span>McKinsey Synthesis Pyramid</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 14: SUMMARY & ACTION ==================== -->
+      <section class="slide" id="slide-14" data-kicker="總結與日常五槓桿" data-title="今日立刻啟用五大高槓桿切換，遇事先問一句「本質是什麼」"
+        data-note-conclusion="從 50 條原理中為個人與團隊提煉五個牽一髮動全身的高槓桿切換，並給出立即可執行的日常起手式。"
+        data-note-evidence="所有切換皆對應書中明確建議：#8 最小一步實體行動、#16 遮住選項寫唯一目的、#20 每天改問交付了什麼外部價值、#39/#40 先分課題再先接納情緒、#42/#43 固定起床時間與先菜肉後主食。"
+        data-note-transition="最後一頁（第 15 頁）附上全部 50 條「是 X，不是 Y」完整速查總表，方便隨時查閱。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">13 · 總結與立刻行動 <span class="archetype-badge">版型 2：五大高槓桿切換</span></div>
+            <h2 class="action-title">讀完 50 問後的高槓桿實踐：個人與團隊今日即可落地的五個核心心智切換</h2>
+          </div>
+          <div class="slide-page-badge">P14 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="mck-card">
+                <h4>切換 1｜內耗焦慮 ➔ 先做最小一步 (#8, #10)</h4>
+                <p>別在腦裡反覆「想通」或盯著不可控結果。寫下今天能做的最小實體動作，讓大腦離開 DMN 空轉。</p>
+              </div>
+              <div class="mck-card">
+                <h4>切換 2｜選擇困難 ➔ 遮住選項先寫「目的」 (#16, #50)</h4>
+                <p>不被 24 種果醬或 AI 百條建議淹沒，先問清現階段唯一目的與必要條件，再一刀篩掉不符選項。</p>
+              </div>
+              <div class="mck-card">
+                <h4>切換 3｜忙碌勤奮 ➔ 每日盤點「外部交付價值」 (#20, #22)</h4>
+                <p>工作結束前問自己「今天幫客戶／夥伴解決了什麼真問題」，管理者放手讓團隊自己找路。</p>
+              </div>
+              <div class="mck-card">
+                <h4>切換 4｜溝通摩擦 ➔ 分清課題 ＋ 先接納情緒 (#39, #40)</h4>
+                <p>分清你我責任邊界；對方傾訴委屈時先壓住建議衝動，先承認感受合理再共創解方。</p>
+              </div>
+            </div>
+            <div class="mck-card navy" style="justify-content:space-between;padding:22px 24px;">
+              <div>
+                <h4 style="font-size:17px;margin-bottom:10px;">切換 5｜立刻應用的一件事：每天遇事套用四步問句</h4>
+                <p style="font-size:13.5px;color:#E2E8F0;margin-bottom:14px;">不論個人生活、健康作息（固定起床時間 #43）或團隊討論卡關，立刻打開首頁「四步拆解工作台」跑這四句：</p>
+                <ul class="mck-list" style="gap:11px;">
+                  <li><strong style="color:#FBBF24;">① 拋開慣例：</strong>別人習慣的做法是什麼？先擱在一邊。</li>
+                  <li><strong style="color:#7DD3FC;">② 連問五個為什麼：</strong>一直追問到「沒有為什麼」的那個不可再分事實。</li>
+                  <li><strong style="color:#6EE7B7;">③ 鎖定必要條件：</strong>要成立這件事，它必須滿足哪一兩個硬條件？</li>
+                  <li><strong style="color:#FDE68A;">④ 重建最小動作：</strong>用最直接滿足該條件的方式，24 小時內動手做一次。</li>
+                </ul>
+              </div>
+              <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;border-left:3px solid #FBBF24;font-size:12.5px;color:#FDE68A;">
+                下一步：前往第 15 頁查閱 50 條全表，或返回首頁使用關鍵字檢索與團隊四步拆解紀錄同步。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常》序言與全書重點實操匯整</span><span>Actionable Executive Summary</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 15: APPENDIX 50 TABLE ==================== -->
+      <section class="slide" id="slide-15" data-kicker="附錄 · 50 問速查總表" data-title="附錄：七大人生維度 50 個生活問題「是 X，不是 Y」完整速查總覽"
+        data-note-conclusion="本頁完整收錄《用第一性原理讀懂日常》全部 50 條「第一性原理（是 X）vs. 常見誤區（不是 Y）」標題，供團隊與個人即時對照檢索。"
+        data-note-evidence="50 條標題完全忠於原書目錄 1–50 條文字，零增刪改寫。"
+        data-note-transition="簡報結束；點擊左上角返回知識庫首頁，即可在互動版「50 生活問題速查矩陣」依維度或關鍵字展開詳細東西方印證與行動方案！">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">14 · 附錄全表 <span class="archetype-badge">50 個生活問題完整速查</span></div>
+            <h2 class="action-title">附錄：《用第一性原理讀懂日常》全部 50 條「本質是 X，不是 Y」一覽表</h2>
+          </div>
+          <div class="slide-page-badge">P15 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-50">
+            <div class="chip-50"><span class="no">01</span><strong>自律是習慣</strong><span class="vs">不是意志力</span></div>
+            <div class="chip-50"><span class="no">02</span><strong>成長是反思</strong><span class="vs">不是經歷</span></div>
+            <div class="chip-50"><span class="no">03</span><strong>專注是放棄</strong><span class="vs">不是剋制</span></div>
+            <div class="chip-50"><span class="no">04</span><strong>情緒管理是接納</strong><span class="vs">不是控制</span></div>
+            <div class="chip-50"><span class="no">05</span><strong>興趣是內在驅動</strong><span class="vs">不是喜歡</span></div>
+            <div class="chip-50"><span class="no">06</span><strong>慎獨是不自欺</strong><span class="vs">不是自律</span></div>
+            <div class="chip-50"><span class="no">07</span><strong>中庸是恰到好處</strong><span class="vs">不是平庸</span></div>
+            <div class="chip-50"><span class="no">08</span><strong>反內耗是行動</strong><span class="vs">不是想通</span></div>
+            <div class="chip-50"><span class="no">09</span><strong>自我價值是內在確認</strong><span class="vs">不是外在認可</span></div>
+            <div class="chip-50"><span class="no">10</span><strong>鬆弛感是放下執念</strong><span class="vs">不是躺平</span></div>
+            <div class="chip-50"><span class="no">11</span><strong>無為是不妄為</strong><span class="vs">不是無所作為</span></div>
+            <div class="chip-50"><span class="no">12</span><strong>認知升級是更新框架</strong><span class="vs">不是堆積知識</span></div>
+            <div class="chip-50"><span class="no">13</span><strong>祛魅是看清真實</strong><span class="vs">不是全盤否定</span></div>
+            <div class="chip-50"><span class="no">14</span><strong>學習是應用</strong><span class="vs">不是記憶</span></div>
+            <div class="chip-50"><span class="no">15</span><strong>閱讀是思考</strong><span class="vs">不是瀏覽數量</span></div>
+            <div class="chip-50"><span class="no">16</span><strong>決策是目的</strong><span class="vs">不是選項</span></div>
+            <div class="chip-50"><span class="no">17</span><strong>覆盤是提煉規律</strong><span class="vs">不是複述經過</span></div>
+            <div class="chip-50"><span class="no">18</span><strong>知行合一是知行一體</strong><span class="vs">不是先知後行</span></div>
+            <div class="chip-50"><span class="no">19</span><strong>教育是培養能力</strong><span class="vs">不是分數</span></div>
+            <div class="chip-50"><span class="no">20</span><strong>職場是價值</strong><span class="vs">不是努力</span></div>
+            <div class="chip-50"><span class="no">21</span><strong>長期主義是複利積累</strong><span class="vs">不是熬時間</span></div>
+            <div class="chip-50"><span class="no">22</span><strong>管理是成就他人</strong><span class="vs">不是管住人</span></div>
+            <div class="chip-50"><span class="no">23</span><strong>反脆弱是從波動受益</strong><span class="vs">不是規避風險</span></div>
+            <div class="chip-50"><span class="no">24</span><strong>時間管理是目標</strong><span class="vs">不是效率</span></div>
+            <div class="chip-50"><span class="no">25</span><strong>匠心是合道</strong><span class="vs">不是熟能生巧</span></div>
+            <div class="chip-50"><span class="no">26</span><strong>投資是風險控制</strong><span class="vs">不是高回報</span></div>
+            <div class="chip-50"><span class="no">27</span><strong>斷舍離是留下重要</strong><span class="vs">不是扔東西</span></div>
+            <div class="chip-50"><span class="no">28</span><strong>營銷是價值交換</strong><span class="vs">不是定位</span></div>
+            <div class="chip-50"><span class="no">29</span><strong>保險是互助</strong><span class="vs">不是理財</span></div>
+            <div class="chip-50"><span class="no">30</span><strong>財富是資產</strong><span class="vs">不是收入</span></div>
+            <div class="chip-50"><span class="no">31</span><strong>家庭是責任</strong><span class="vs">不是對錯</span></div>
+            <div class="chip-50"><span class="no">32</span><strong>愛情是承諾</strong><span class="vs">不是浪漫</span></div>
+            <div class="chip-50"><span class="no">33</span><strong>親子是陪伴</strong><span class="vs">不是報班</span></div>
+            <div class="chip-50"><span class="no">34</span><strong>友情是靠得住</strong><span class="vs">不是玩得來</span></div>
+            <div class="chip-50"><span class="no">35</span><strong>社交是品質</strong><span class="vs">不是數量</span></div>
+            <div class="chip-50"><span class="no">36</span><strong>識人是看人品</strong><span class="vs">不是聽言語</span></div>
+            <div class="chip-50"><span class="no">37</span><strong>原生家庭是起點</strong><span class="vs">不是宿命</span></div>
+            <div class="chip-50"><span class="no">38</span><strong>提問是追問</strong><span class="vs">不是要答案</span></div>
+            <div class="chip-50"><span class="no">39</span><strong>邊界感是分清你我</strong><span class="vs">不是學會說不</span></div>
+            <div class="chip-50"><span class="no">40</span><strong>情緒價值是接納情緒</strong><span class="vs">不是哄人開心</span></div>
+            <div class="chip-50"><span class="no">41</span><strong>健康是身心愉悅</strong><span class="vs">不是不生病</span></div>
+            <div class="chip-50"><span class="no">42</span><strong>減肥是攝入低於消耗</strong><span class="vs">不是運動量</span></div>
+            <div class="chip-50"><span class="no">43</span><strong>睡眠是規律</strong><span class="vs">不是時長</span></div>
+            <div class="chip-50"><span class="no">44</span><strong>飲食是均衡</strong><span class="vs">不是進補</span></div>
+            <div class="chip-50"><span class="no">45</span><strong>運動是長期可持續</strong><span class="vs">不是強度</span></div>
+            <div class="chip-50"><span class="no">46</span><strong>幸福是意義</strong><span class="vs">不是擁有</span></div>
+            <div class="chip-50"><span class="no">47</span><strong>心流是投入</strong><span class="vs">不是專注</span></div>
+            <div class="chip-50"><span class="no">48</span><strong>自我實現是成為自己</strong><span class="vs">不是變優秀</span></div>
+            <div class="chip-50"><span class="no">49</span><strong>自洽是內在一致</strong><span class="vs">不是自我和解</span></div>
+            <div class="chip-50" style="background:#FFFBEB;border-color:#F59E0B;"><span class="no">50</span><strong>自由是能選擇</strong><span class="vs">不是沒人管</span></div>
+          </div>
+          <div class="callout-gold" style="padding:7px 12px;font-size:11.8px;">
+            <strong>延伸互動：</strong>返回首頁「50 生活問題速查矩陣」，可依 7 大維度或關鍵字篩選每條的東西方印證與行動方案，並一鍵跳回本簡報對應頁面。
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《用第一性原理讀懂日常：50個生活問題的重新拆解》品成心理（微信讀書出品）</span><span>End of Deck · FP-02</span></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 3-Part Speaker Notes Drawer -->
+  <aside class="notes-drawer" id="notes-drawer" aria-label="講者三段式備忘稿">
+    <div class="notes-header">
+      <span id="notes-slide-label">Slide 01 / 15</span>
+      <span>講者提示：按 [N] 收合講稿 · [G] 總覽檢索 · [T] 10 分鐘倒數計時 · [←/→] 翻頁</span>
+    </div>
+    <div class="notes-grid">
+      <div class="note-col"><strong>① 本頁結論</strong><span id="note-conclusion"></span></div>
+      <div class="note-col"><strong>② 補充說明（忠於原著）</strong><span id="note-evidence"></span></div>
+      <div class="note-col"><strong>③ 下一頁轉場</strong><span id="note-transition"></span></div>
+    </div>
+  </aside>
+
+  <!-- Thumbnail Overview & In-Deck Search Overlay -->
+  <div class="grid-overlay" id="grid-overlay" aria-label="投影片縮圖總覽">
+    <div class="grid-overlay-bar">
+      <input type="search" id="grid-filter" class="grid-filter-input" placeholder="頁內關鍵字篩選投影片（例：SpaceX、反內耗、邊界感、褪黑素、選擇悖論）..." />
+      <button type="button" class="ctrl-btn" id="btn-close-grid">✕ 關閉 (Esc)</button>
+    </div>
+    <div class="thumbs-grid" id="thumbs-grid"></div>
+  </div>
+
+  <script src="../assets/js/deck.js"></script>
+</body>
+</html>

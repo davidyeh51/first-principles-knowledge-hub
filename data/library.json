@@ -1,0 +1,215 @@
+{
+  "version": "1.0.0",
+  "portalName": "第一性原理知識庫",
+  "portalEnglish": "First Principles Knowledge Hub",
+  "tagline": "以麥肯錫結構化思維與金字塔原理，將第一性原理學習系統與 50 個日常問題拆解萃取為 10 分鐘顧問級簡報、原創 SVG 圖解與團隊可共用的決策智庫",
+  "audience": "個人認知重構 ✕ 團隊方法論對齊 ✕ 跨書關鍵字檢索",
+  "updatedAt": "2026-11-24",
+  "categories": [
+    { "id": "all", "name": "全部書目", "icon": "grid" },
+    { "id": "learning", "name": "學習系統與元認知", "icon": "compass" },
+    { "id": "daily-life", "name": "日常決策與生活拆解", "icon": "layers" },
+    { "id": "business", "name": "商業演繹與工程實戰", "icon": "cpu" },
+    { "id": "models", "name": "跨學科多元思維模型", "icon": "network" }
+  ],
+  "hotKeywords": [
+    "第一性原理",
+    "艾賓浩斯",
+    "間隔效應",
+    "測試效應",
+    "三步拆解法",
+    "錯題本",
+    "AI 陪練",
+    "馬斯克 2%",
+    "反內耗",
+    "鬆弛感",
+    "認知升級",
+    "價值交換",
+    "反脆弱",
+    "邊界感",
+    "情緒價值",
+    "心流",
+    "選擇悖論"
+  ],
+  "books": [
+    {
+      "id": "fp-001",
+      "slug": "fp-learning-beichen",
+      "code": "FP-01",
+      "title": "《第一性原理學習法》",
+      "subtitle": "從「知識搬運工」轉型為「體系建築師」，打造 AI 時代的終身學習引擎",
+      "author": "北辰（著）｜ 北京大學理學博士",
+      "sourceMeta": "人民郵電出版社（2026年10月）｜ 58千字 ｜ 8大章節 × 8條第一性學習公式",
+      "category": "learning",
+      "categoryLabel": "學習系統與元認知",
+      "status": "ready",
+      "badge": "旗艦完整簡報",
+      "readingTime": "10 分鐘導讀",
+      "slidesCount": 15,
+      "svgCount": 11,
+      "coverImage": "assets/images/book-fp-learning-cover.jpg",
+      "deckUrl": "decks/fp-learning-beichen.html",
+      "publishedDate": "2026-11-24",
+      "coreThesis": "學習的本質不是「往腦袋裡搬運知識」，而是「讓腦袋裡長出知識體系」。回歸「從不知走向有知」的編碼、鞏固、提取三大基本單元，將方向與系統置於盲目勤奮之前，並以「第一性思考 × AI」建立每三週迭代一次的終身學習飛輪。",
+      "keyPillars": [
+        { "label": "方向校正", "desc": "避開拼時長、湊數量、抄筆記三大偽努力陷阱（方向×方法＞努力）" },
+        { "label": "三大單元", "desc": "編碼（意義加工）、鞏固（間隔重啟）、提取（測試效應：記憶＝提取×間隔）" },
+        { "label": "系統與輸出", "desc": "三步拆解建網、手術檯式錯題修復、三段式考場節奏與卡尼曼覆盤" },
+        { "label": "AI 賦能迭代", "desc": "讓 AI 當陪練/辯手/對比助手/出題官，結合三週循環持續升級學習方法" }
+      ],
+      "teamActions": [
+        {
+          "key": "fp01-three-questions",
+          "title": "每次學完新知識必跑「三問法＋費曼五分鐘檢測」",
+          "desc": "一句話小學生聽懂的概括 → 連結已知舊知識近親 → 轉化為一個現實問題解法，並錄音檢查卡殼點。",
+          "owner": "個人修煉"
+        },
+        {
+          "key": "fp01-three-cards",
+          "title": "啟動「每日 3 張提取卡 × 5 分鐘」長期記憶飛輪",
+          "desc": "正面寫問題、背面寫答案，依據回憶成敗動態拉長或縮短間隔，用系統取代會耗竭的意志力。",
+          "owner": "個人＆團隊"
+        },
+        {
+          "key": "fp01-ai-socratic",
+          "title": "將 AI 從「搜題答案機」升級為「蘇格拉底陪練與反駁對手」",
+          "desc": "要求 AI 每次只問一題引導推導、針對己見給出三條事實反駁、並跑三週方法迭代（記錄→微調→對比）。",
+          "owner": "團隊共學"
+        }
+      ],
+      "modules": [
+        { "range": "P01–P02", "name": "封面與全書骨架", "desc": "馬斯克語義樹與 8 章第一性學習公式總覽" },
+        { "range": "P03–P04", "name": "方向校準與記憶單元", "desc": "偽努力三陷阱、艾賓浩斯間隔效應 (68vs38) 與成長思維" },
+        { "range": "P05–P07", "name": "理解・記憶・運用閉環", "desc": "加工深度實驗、三步拆解法、卡片系統與手術檯錯題本" },
+        { "range": "P08–P09", "name": "系統習慣與考場輸出", "desc": "三階段節奏 (1/5-3/5-1/5)、防跳步清單與卡尼曼均值回歸覆盤" },
+        { "range": "P10–P12", "name": "跨學科公理與 AI 時代", "desc": "五大領域底層規律、AI 四種角色與三週方法迭代循環" },
+        { "range": "P13–P15", "name": "因果脈絡・行動・公式庫", "desc": "搬運工轉型建築師路徑、24小時啟動清單與 8 公式總表" }
+      ]
+    },
+    {
+      "id": "fp-002",
+      "slug": "fp-daily-50-pincheng",
+      "code": "FP-02",
+      "title": "《用第一性原理讀懂日常》",
+      "subtitle": "50 個生活問題的重新拆解：追問到根，獲得真正的選擇自由",
+      "author": "品成心理（著）｜ 微信讀書出品",
+      "sourceMeta": "50 個高頻生活議題 × 7 大人生維度 ｜ 東西方哲學與實證心理學雙重印證",
+      "category": "daily-life",
+      "categoryLabel": "日常決策與生活拆解",
+      "status": "ready",
+      "badge": "旗艦完整簡報",
+      "readingTime": "10 分鐘導讀",
+      "slidesCount": 15,
+      "svgCount": 11,
+      "coverImage": "assets/images/book-fp-daily-50-cover.jpg",
+      "deckUrl": "decks/fp-daily-50-pincheng.html",
+      "publishedDate": "2026-11-24",
+      "coreThesis": "現代人的焦慮多半不是「選項太少」，而是「看不清問題本質而在表層亂選」。透過第一性原理四步法（拋開慣例 ➔ 連續追問至無法再分 ➔ 鎖定必要條件 ➔ 重建解法），把自我、思維、事業、財富、關係、健康、意義 50 個日常高頻難題還原至根源，從而擁有不被表象綁架的選擇自由。",
+      "keyPillars": [
+        { "label": "四步拆解法", "desc": "馬斯克火箭原材料僅佔 2%（減本 92%），結合蘇格拉底反詰法與《大學》本末論" },
+        { "label": "自我與思維 (#1–19)", "desc": "自律是習慣、反內耗靠行動、鬆弛是放下執念、認知升級是更新框架而非堆書" },
+        { "label": "事業與財富 (#20–30)", "desc": "職場交付價值、長期主義是複利、管理成就他人、投資先控風險、保險是互助" },
+        { "label": "關係健康意義 (#31–50)", "desc": "邊界是分清你我、睡眠重規律、幸福靠意義 (H=S+C+V)、自由是能自主選擇" }
+      ],
+      "teamActions": [
+        {
+          "key": "fp02-value-delivery",
+          "title": "以「今天交付了什麼外部價值」取代「今天有多忙」",
+          "desc": "對應 #20 職場價值與 #22 管理成就他人：區分向內努力與向外成果，管理者對方向與結果負責、把空間留給夥伴。",
+          "owner": "團隊協作"
+        },
+        {
+          "key": "fp02-boundary-empathy",
+          "title": "在協作與溝通中落實「課題分離 × 情緒先接納後建議」",
+          "desc": "對應 #39 邊界感與 #40 情緒價值：先看清責任歸屬再決定拒絕；對夥伴負面情緒先承認理解，再共創解法。",
+          "owner": "團隊溝通"
+        },
+        {
+          "key": "fp02-four-step-review",
+          "title": "遇重大決策時跑一次「第一性原理四步拆解工作台」",
+          "desc": "對應 #16 決策目的與 #38 追問：先放下「大家怎麼做」的類比慣性，問清目的與必要條件再評估選項。",
+          "owner": "個人＆團隊"
+        }
+      ],
+      "modules": [
+        { "range": "P01–P03", "name": "封面・全書架構・四步方法", "desc": "SpaceX 2% 與 92% 降幅案例、7 大維度地圖與四步拆解漏斗" },
+        { "range": "P04–P05", "name": "一、自我與成長 (#1–11)", "desc": "習慣取代意志力、行動終結 DMN 內耗、控制與非控制二分法" },
+        { "range": "P06", "name": "二、思維與認知 (#12–19)", "desc": "哥白尼框架置換、祛魅看清真實、24小時最小應用與知行一體" },
+        { "range": "P07", "name": "三、事業與成就 (#20–25)", "desc": "價值交付、複利積累、成就他人、塔勒布反脆弱槓鈴與庖丁合道" },
+        { "range": "P08", "name": "四、財富與金錢 (#26–30)", "desc": "本金風控四防線、斷舍離留重要、價值交換、互助保險與資產存量" },
+        { "range": "P09–P10", "name": "五、關係與情感 (#31–40)", "desc": "責任與承諾、鄧巴圈層 (5/15/50/150)、顯示性偏好識人與課題分離" },
+        { "range": "P11–P12", "name": "六健康・七人生 (#41–50)", "desc": "熱量缺口、460-480nm 藍光與褪黑素、H=S+C+V、心流與選擇悖論" },
+        { "range": "P13–P15", "name": "收斂脈絡・行動・50問總覽", "desc": "從追問到根邁向選擇自由、日常 5 槓桿與 50 條對照速查表" }
+      ]
+    },
+    {
+      "id": "fp-003",
+      "slug": "fp-li-shanyou",
+      "code": "FP-03",
+      "title": "《第一性原理》商業演繹法",
+      "subtitle": "預留擴充席位｜李善友：從歸納法誤區邁向公理化破界創新",
+      "author": "待匯入原書／講義資料",
+      "sourceMeta": "預留擴充槽位（可依 docs/EXPANSION.md 三步上架）",
+      "category": "business",
+      "categoryLabel": "商業演繹與工程實戰",
+      "status": "planned",
+      "badge": "預留擴充席位",
+      "readingTime": "待製作 10 分鐘簡報",
+      "slidesCount": 0,
+      "svgCount": 0,
+      "coverImage": "",
+      "deckUrl": "#",
+      "publishedDate": "預留中",
+      "coreThesis": "此席位預留予李善友《第一性原理》等商業思維專著，未來將深入拆解「非連續性、第一曲線與第二曲線、演繹法與歸納法邊界、破界創新三步曲」，與現有個人學習及日常問題模組形成商業戰略閉環。",
+      "keyPillars": [],
+      "teamActions": [],
+      "modules": []
+    },
+    {
+      "id": "fp-004",
+      "slug": "musk-playbook",
+      "code": "FP-04",
+      "title": "《馬斯克寶典》工程與物理思維",
+      "subtitle": "預留擴充席位｜工作區既有《馬思克寶典》資料夾整合",
+      "author": "待匯入工作區資料",
+      "sourceMeta": "預留擴充槽位（對應工作區「馬思克寶典」目錄）",
+      "category": "business",
+      "categoryLabel": "商業演繹與工程實戰",
+      "status": "planned",
+      "badge": "預留擴充席位",
+      "readingTime": "待製作 10 分鐘簡報",
+      "slidesCount": 0,
+      "svgCount": 0,
+      "coverImage": "",
+      "deckUrl": "#",
+      "publishedDate": "預留中",
+      "coreThesis": "此席位預留予工作區既有「馬思克寶典」資料整合，萃取白癡指數 (Idiot Index)、五步工作法與物理學第一性原理在 SpaceX / Tesla 的硬核工程實踐。",
+      "keyPillars": [],
+      "teamActions": [],
+      "modules": []
+    },
+    {
+      "id": "fp-005",
+      "slug": "mental-models-synthesis",
+      "code": "FP-05",
+      "title": "《現代思維工具 100 講》✕ 第一性原理對讀",
+      "subtitle": "預留擴充席位｜萬維鋼與查理·芒格多元思維模型跨領域統合",
+      "author": "待匯入原書／講義資料",
+      "sourceMeta": "預留擴充槽位（對應工作區「万维钢·现代思维工具100讲」）",
+      "category": "models",
+      "categoryLabel": "跨學科多元思維模型",
+      "status": "planned",
+      "badge": "預留擴充席位",
+      "readingTime": "待製作 10 分鐘簡報",
+      "slidesCount": 0,
+      "svgCount": 0,
+      "coverImage": "",
+      "deckUrl": "#",
+      "publishedDate": "預留中",
+      "coreThesis": "此席位預留予工作區「萬維鋼·現代思維工具 100 講」整合，串接貝氏更新、複雜系統與跨學科思維柵格，補強不同領域的公理與底層規律庫。",
+      "keyPillars": [],
+      "teamActions": [],
+      "modules": []
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第一性原理知識庫 ｜ 麥肯錫結構化簡報 ✕ 個人與團隊共學智庫</title>
+  <meta name="description" content="專為自己與團隊成員打造的第一性原理知識庫：麥肯錫顧問架構 10 分鐘導讀簡報、28+ 張原創 SVG 圖解、50 生活問題速查矩陣、全域關鍵字即時檢索、可擴充多書架構與 Supabase 團隊共學同步。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/portal.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand">
+        <div class="brand-mark">一</div>
+        <div class="brand-text">
+          <span class="brand-title">第一性原理知識庫</span>
+          <span class="brand-sub">First Principles Knowledge Hub</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="主導覽">
+        <a href="#library">典藏書庫與簡報</a>
+        <a href="#principles-50">50 生活問題矩陣</a>
+        <a href="#decon-lab">四步拆解工作台</a>
+        <a href="#team-hub">團隊共學 ✕ Supabase</a>
+        <a href="docs/EXPANSION.md" target="_blank">擴充架構指南</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-search-trigger" id="top-search-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span>快速檢索</span>
+          <span class="kbd">Ctrl K</span>
+        </button>
+        <button type="button" class="btn-auth" id="auth-open-btn">
+          <span class="sync-dot" id="sync-dot"></span>
+          <span id="auth-btn-label">團隊登入 / Supabase</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow">
+          <span>McKINSEY STRUCTURED BRIEFING</span>
+          <span>·</span>
+          <span>自己 ✕ 團隊成員共用智庫</span>
+        </div>
+        <h1>追問到根，重建體系：打造個人與團隊的<span>第一性原理決策引擎</span></h1>
+        <p class="hero-lead">
+          以麥肯錫金字塔原理與結構化圖解，完整萃取《第一性原理學習法》（北辰）與《用第一性原理讀懂日常：50個生活問題的重新拆解》（品成心理），
+          提供 10 分鐘 16:9 精華簡報、原創向量 SVG 圖表、跨書關鍵字即時搜尋，以及預留多書擴充與 Supabase 團隊共學同步架構。
+        </p>
+
+        <div class="book-cta-row">
+          <a href="decks/fp-learning-beichen.html" class="btn-gold">開啟簡報：《第一性原理學習法》 →</a>
+          <a href="decks/fp-daily-50-pincheng.html" class="btn-cyan">開啟簡報：《讀懂日常 50 問》 →</a>
+          <a href="#decon-lab" class="btn-search-trigger" style="padding:11px 16px;font-size:13.5px;">開啟四步拆解工作台</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-val" id="stat-books">2<em>/ 5 席位</em></span>
+            <span class="stat-label">書庫上架 / 預留擴充</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-slides">30<em>頁</em></span>
+            <span class="stat-label">雙旗艦 10 分鐘簡報</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-svgs">22<em>張</em></span>
+            <span class="stat-label">原創 SVG 結構圖解</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-keywords">80<em>條索引</em></span>
+            <span class="stat-label">跨書 ✕ 50 問跳轉檢索</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual-card">
+        <img src="assets/images/hero-first-principles.jpg" alt="第一性原理知識庫主視覺：從底層基石公理生長出的語義樹網絡（重新繪製）" />
+        <div class="hero-visual-caption">
+          <span><strong>底層公理 ➔ 語義枝葉：</strong>不隨波逐流，回到本質重推一遍</span>
+          <span>原創重繪視覺</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Keyword Search Panel -->
+  <section class="search-hub" aria-label="全域關鍵字檢索">
+    <div class="container">
+      <div class="search-panel">
+        <div class="search-bar-wrap">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input
+            type="search"
+            id="global-search-input"
+            class="search-input"
+            placeholder="輸入關鍵字即時跨書＋50問檢索（例：艾賓浩斯、間隔效應、三步拆解法、反內耗、價值交換、邊界感、選擇悖論）..."
+            autocomplete="off"
+          />
+          <button type="button" id="search-clear-btn" class="search-clear-btn">清除</button>
+        </div>
+
+        <div class="hot-tags" id="hot-tags"></div>
+
+        <div class="search-results" id="search-results">
+          <div class="search-results-meta">
+            <span id="search-count-text"></span>
+            <span>點擊任一結果即可直達簡報頁碼或日常原理卡片</span>
+          </div>
+          <div class="results-grid" id="results-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extensible Book Library Section -->
+  <section class="section-block" id="library">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Extensible Knowledge Library</span>
+          <h2>典藏書庫與 10 分鐘麥肯錫簡報（預留多書擴充席位）</h2>
+        </div>
+        <div class="cat-tabs" id="category-tabs"></div>
+      </div>
+
+      <div class="featured-stack" id="featured-wrap"></div>
+      <div class="planned-grid" id="planned-wrap"></div>
+
+      <div class="notice-box" style="margin-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+        <span><strong>可擴充架構設計：</strong>未來團隊新增任何第一性原理書籍或專題，只需 3 步驟更新 <code>data/library.json</code>、<code>data/search-index.json</code> 與放入 <code>decks/</code>，首頁即自動呈現並納入全域搜尋。</span>
+        <a href="docs/EXPANSION.md" target="_blank" style="font-weight:700;color:#92400E;">檢視 3 步驟擴充手冊 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 50 Daily Life Principles Matrix -->
+  <section class="section-block" id="principles-50" style="background:#FFFFFF;border-top:1px solid var(--slate-200);border-bottom:1px solid var(--slate-200);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">50 Life Principles Explorer</span>
+          <h2>《用第一性原理讀懂日常》50 個生活問題速查矩陣</h2>
+        </div>
+      </div>
+
+      <div class="matrix-controls">
+        <div class="cat-tabs" id="dim-tabs">
+          <button type="button" class="cat-tab active" data-dim="all">全部 (50)</button>
+          <button type="button" class="cat-tab" data-dim="self">自我與成長 (11)</button>
+          <button type="button" class="cat-tab" data-dim="cognition">思維與認知 (8)</button>
+          <button type="button" class="cat-tab" data-dim="career">事業與成就 (6)</button>
+          <button type="button" class="cat-tab" data-dim="wealth">財富與金錢 (5)</button>
+          <button type="button" class="cat-tab" data-dim="relation">關係與情感 (10)</button>
+          <button type="button" class="cat-tab" data-dim="health">健康與身體 (5)</button>
+          <button type="button" class="cat-tab" data-dim="meaning">人生與意義 (5)</button>
+        </div>
+        <input type="search" id="p50-filter" class="matrix-search" placeholder="篩選 50 問關鍵字（例：自律、保險、睡眠、心流）..." />
+      </div>
+
+      <div class="principles-grid" id="p50-grid"></div>
+    </div>
+  </section>
+
+  <!-- 4-Step Deconstruction Lab -->
+  <section class="section-block" id="decon-lab">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">First Principles 4-Step Lab</span>
+          <h2>互動實戰：第一性原理四步拆解工作台</h2>
+        </div>
+      </div>
+
+      <div class="lab-shell">
+        <form id="decon-form" class="form-grid">
+          <div class="preset-row">
+            <span style="font-size:12px;font-weight:700;color:var(--slate-500);align-self:center;">帶入經典範本：</span>
+            <button type="button" class="preset-btn" data-preset="spacex">SpaceX 火箭降本 92%</button>
+            <button type="button" class="preset-btn" data-preset="meeting">團隊會議低效空轉拆解</button>
+            <button type="button" class="preset-btn" data-preset="study">為何刷題很多卻沒提分</button>
+          </div>
+
+          <div>
+            <label class="field-label" for="decon-topic">欲拆解的問題或日常名詞</label>
+            <input type="text" id="decon-topic" class="input-ctrl" required placeholder="例如：為什麼專案進度總是最後一刻才趕工？" />
+          </div>
+          <div>
+            <label class="field-label" for="decon-surface">Step 1 · 放下慣例：目前大家（類比思維）習慣怎麼做？</label>
+            <input type="text" id="decon-surface" class="input-ctrl" placeholder="例如：靠開更多追進度會議、要求大家加班趕工" />
+          </div>
+          <div>
+            <label class="field-label" for="decon-whys">Step 2 · 連續追問「為什麼」直到無法再分（5 Whys）</label>
+            <textarea id="decon-whys" class="textarea-ctrl" placeholder="為何拖延？→ 任務太抽象不知從何下手 → 為何抽象？→ 沒有定義明日最小具體交付物..."></textarea>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div>
+              <label class="field-label" for="decon-bedrock">追問終點：不可再分的本質事實</label>
+              <input type="text" id="decon-bedrock" class="input-ctrl" required placeholder="例如：模糊會引發大腦逃避阻力" />
+            </div>
+            <div>
+              <label class="field-label" for="decon-cond">Step 3 · 必須滿足的硬條件</label>
+              <input type="text" id="decon-cond" class="input-ctrl" placeholder="例如：前晚明確切出兩分鐘可啟動的具體產出" />
+            </div>
+          </div>
+          <div>
+            <label class="field-label" for="decon-rebuilt">Step 4 · 重建解法（24 小時最小實踐）</label>
+            <input type="text" id="decon-rebuilt" class="input-ctrl" required placeholder="例如：每日收工前寫下明日三件帶時間與定量指標的行動指南" />
+          </div>
+          <button type="submit" class="btn-gold" style="align-self:flex-start;">儲存此拆解紀錄（雲端 / 本機同步）</button>
+        </form>
+
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <h3 style="margin:0;font-size:17px;color:var(--navy-950);">團隊拆解實戰檔案庫</h3>
+            <span id="decon-mode-badge" class="pill pill-slate">本機暫存</span>
+          </div>
+          <div id="decon-list" style="max-height:430px;overflow-y:auto;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Co-Learning & Supabase Sync -->
+  <section class="section-block" id="team-hub" style="background:#FFFFFF;border-top:1px solid var(--slate-200);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Team Co-Learning ✕ Supabase RLS</span>
+          <h2>個人落地打卡與團隊共學筆記（雙軌無縫同步）</h2>
+        </div>
+        <span id="cloud-status-pill" class="pill pill-slate">目前模式：本機暫存（登入後啟用 Supabase 雲端同步）</span>
+      </div>
+
+      <div class="team-grid">
+        <div class="panel-card">
+          <h3 style="margin:0 0 12px;font-size:18px;color:var(--navy-950);">行動落地追蹤清單</h3>
+          <p style="font-size:12.8px;color:var(--slate-600);margin:0 0 14px;">勾選完成並同步至 Supabase（<code>fp_action_checkins</code>）或本機。</p>
+          <div id="actions-wrap"></div>
+        </div>
+
+        <div class="panel-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <h3 style="margin:0;font-size:18px;color:var(--navy-950);">團隊底層洞察筆記</h3>
+            <select id="notes-book-filter" class="select-ctrl" style="width:auto;padding:5px 10px;font-size:12.5px;">
+              <option value="all">全部書目</option>
+              <option value="fp-learning-beichen">《第一性原理學習法》</option>
+              <option value="fp-daily-50-pincheng">《用第一性原理讀懂日常》</option>
+            </select>
+          </div>
+
+          <form id="note-form" style="display:flex;flex-direction:column;gap:9px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--slate-200);">
+            <div style="display:grid;grid-template-columns:1fr 110px 130px;gap:8px;">
+              <select id="note-book" class="select-ctrl">
+                <option value="fp-learning-beichen">《第一性原理學習法》</option>
+                <option value="fp-daily-50-pincheng">《用第一性原理讀懂日常》</option>
+              </select>
+              <input type="number" id="note-slide" class="input-ctrl" min="1" max="15" placeholder="頁碼 (1-15)" />
+              <select id="note-cat" class="select-ctrl">
+                <option value="底層洞察">底層洞察</option>
+                <option value="拆解實踐">拆解實踐</option>
+                <option value="生活50問應用">生活50問應用</option>
+                <option value="團隊討論">團隊討論</option>
+              </select>
+            </div>
+            <input type="text" id="note-title" class="input-ctrl" required placeholder="筆記標題（例：對團隊週會套用「目標優先於效率」）」" />
+            <textarea id="note-content" class="textarea-ctrl" required placeholder="寫下你的第一性原理觀察、實作回饋或反轉問題..."></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+              <input type="text" id="note-author" class="input-ctrl" style="max-width:190px;" placeholder="署名（預設自動帶入）" />
+              <button type="submit" class="btn-gold" style="padding:9px 16px;font-size:13px;">發佈共學筆記</button>
+            </div>
+          </form>
+
+          <div id="notes-list" style="max-height:360px;overflow-y:auto;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auth Modal -->
+  <div class="modal-backdrop" id="auth-modal" aria-hidden="true">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h3 style="margin:0;color:var(--navy-950);">團隊成員 Supabase 登入</h3>
+        <button type="button" id="auth-close-btn" style="border:none;background:none;font-size:20px;cursor:pointer;">✕</button>
+      </div>
+      <p style="font-size:12.5px;color:var(--slate-600);margin:0 0 14px;">
+        純前端僅使用公開 <code>publishable key</code>，並受 PostgreSQL RLS 保護（資料表定義於 <code>supabase/schema.sql</code>）。未登入時所有筆記與打卡自動安全存於本機。
+      </p>
+      <div id="auth-signed-in-box" style="display:none;">
+        <p style="font-size:13.5px;">目前登入帳號：<strong id="auth-user-email"></strong></p>
+        <button type="button" id="btn-signout" class="btn-gold" style="width:100%;justify-content:center;">登出帳號</button>
+      </div>
+      <form id="auth-form" style="display:flex;flex-direction:column;gap:10px;">
+        <input type="email" id="auth-email" class="input-ctrl" required placeholder="團隊成員 Email" />
+        <input type="password" id="auth-password" class="input-ctrl" required placeholder="密碼（至少 6 碼）" />
+        <div id="auth-msg" style="font-size:12.5px;color:var(--red-700);"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <button type="submit" class="btn-gold" style="justify-content:center;">登入同步</button>
+          <button type="button" id="btn-signup" class="btn-cyan" style="justify-content:center;color:var(--navy-900);border-color:var(--slate-300);background:var(--slate-100);">註冊新成員</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span>第一性原理知識庫 ｜ 個人認知重構 ✕ 團隊方法論對齊 ✕ GitHub Pages + Supabase RLS</span>
+      <span><a href="docs/EXPANSION.md" target="_blank">擴充架構指南</a> · <a href="supabase/schema.sql" target="_blank">Supabase RLS Schema</a></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-sync.js"></script>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

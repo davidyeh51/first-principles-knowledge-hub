@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《第一性原理學習法》10 分鐘麥肯錫精華簡報 ｜ 第一性原理知識庫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/deck.css" />
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="deck-topbar">
+    <div class="deck-left">
+      <a href="../index.html" class="btn-back-home">← 返回知識庫首頁</a>
+      <div class="deck-title-bar"><span>FP-01</span>《第一性原理學習法》北辰 — 10 分鐘麥肯錫精華簡報</div>
+    </div>
+    <div class="deck-controls">
+      <span class="timer-pill" id="timer-pill" title="點擊開始/暫停 10 分鐘計時（雙擊重置）">⏱ 10:00</span>
+      <span class="slide-counter" id="slide-counter">01 / 15</span>
+      <button type="button" class="ctrl-btn" id="btn-grid" title="縮圖總覽與頁內檢索 (G)">☰ 總覽 (G)</button>
+      <button type="button" class="ctrl-btn" id="btn-notes" title="切換三段式講者備忘稿 (N)">📝 講稿 (N)</button>
+      <button type="button" class="ctrl-btn" id="btn-print" title="列印或匯出 PDF">🖨 PDF</button>
+      <button type="button" class="ctrl-btn" id="btn-fullscreen" title="全螢幕簡報 (F)">⛶ 全螢幕 (F)</button>
+    </div>
+  </header>
+
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+  <button type="button" class="nav-arrow prev" id="btn-prev" aria-label="上一頁">‹</button>
+  <button type="button" class="nav-arrow next" id="btn-next" aria-label="下一頁">›</button>
+
+  <main class="stage-wrapper" id="stage-wrapper">
+    <div class="stage-scaler" id="stage-scaler">
+
+      <!-- ==================== SLIDE 1: COVER ==================== -->
+      <section class="slide cover-slide active" id="slide-1" data-kicker="封面與核心主張" data-title="學習不是往腦袋裝知識，而是長出可遷移的體系"
+        data-note-conclusion="北辰《第一性原理學習法》指出：多數人學不好不是不夠努力，而是用「搬運工心態」學習；真正有效的學習是回到本質，讓大腦長出知識體系。"
+        data-note-evidence="全書引馬斯克「知識語義樹」名言：在鑽研枝葉細節前，先理解樹幹與大分枝（基本原理）。原書 58 千字共 8 章，涵蓋方向校準、理解、記憶、運用、系統、考試、學科規律與 AI 賦能。"
+        data-note-transition="接下來第 2 頁我們先用一張全景骨架圖，看懂這套 8 章 8 公式的學習系統如何互相支撐。">
+        <div class="cover-grid">
+          <div>
+            <div class="cover-eyebrow">McKINSEY 10-MIN EXECUTIVE BRIEFING · FP-01</div>
+            <h1 class="cover-title">從「知識搬運工」轉型<span>體系建築師</span>：用第一性原理重塑終身學習</h1>
+            <p class="cover-subtitle">
+              原著：北辰（北京大學理學博士）｜ 人民郵電出版社（2026年10月）<br>
+              刷題一萬道，不如用第一性原理解透一道題——告別偽努力，讓每一分鐘學習都算數。
+            </p>
+            <div class="cover-quote">
+              「把知識看作一棵『語義樹』非常重要——在鑽研枝葉和細節之前，先確保你理解了基本原理，也就是樹幹和大的分枝，否則那些細節就無處依附。」—— 埃隆·馬斯克（全書扉頁引言）
+            </div>
+            <div class="cover-metrics">
+              <div class="cover-metric-box"><strong>8 章</strong><span>全流程覆蓋</span></div>
+              <div class="cover-metric-box"><strong>8 條</strong><span>第一性學習公式</span></div>
+              <div class="cover-metric-box"><strong>3 單元</strong><span>編碼・鞏固・提取</span></div>
+              <div class="cover-metric-box"><strong>10 分鐘</strong><span>15 頁結構導讀</span></div>
+            </div>
+          </div>
+          <div class="cover-art-frame">
+            <img src="../assets/images/book-fp-learning-cover.jpg" alt="《第一性原理學習法》重新繪製封面插畫：語義樹與三大基石" />
+            <div class="cover-art-scrim"></div>
+            <div class="cover-art-caption">
+              <span class="tag">REDRAWN EDITION · SEMANTIC TREE</span>
+              <strong>《第一性原理學習法》</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 2: ARCHITECTURE ==================== -->
+      <section class="slide" id="slide-2" data-kicker="全書邏輯骨架" data-title="四階八章八公式構成完整學習閉環"
+        data-note-conclusion="全書並非零散技巧集，而是「校準方向 → 三步核心動作 → 系統與輸出引擎 → 跨科與 AI 進化」的四階段邏輯骨架。"
+        data-note-evidence="原書序言明確劃分：第 1 章校準方向；第 2-4 章對應知識從陌生到融入大腦的三步（理解、記憶、運用）；第 5-6 章是高效運轉引擎（系統、考試）；第 7-8 章則是跨學科遷移與面向 AI 的持續迭代。"
+        data-note-transition="看清全書藍圖後，第 3 頁我們立刻切入第 1 章：為什麼大多數人的努力只是「廉價的自我感動」？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">01 · 全書架構圖 <span class="archetype-badge">版型 4：連鎖論法 Flow</span></div>
+            <h2 class="action-title">全書以「四階八章八公式」串聯方向校準、三步動作、系統引擎與 AI 時代賦能</h2>
+          </div>
+          <div class="slide-page-badge">P02 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="svg-box" style="flex:1;">
+            <svg viewBox="0 0 1160 400" xmlns="http://www.w3.org/2000/svg" aria-label="全書四階八章八公式架構圖">
+              <defs>
+                <marker id="arr-navy" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#1E3A8A"/>
+                </marker>
+                <marker id="arr-gold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#D97706"/>
+                </marker>
+              </defs>
+              <!-- Stage 1 -->
+              <rect x="20" y="30" width="250" height="330" rx="12" fill="#051C2C"/>
+              <text x="40" y="64" fill="#7DD3FC" font-size="13" font-weight="700">STAGE 1 · 底層校準</text>
+              <text x="40" y="92" fill="#FFFFFF" font-size="19" font-weight="700">Ch1 重新認識學習</text>
+              <line x1="40" y1="108" x2="250" y2="108" stroke="#1E3A8A" stroke-width="1.5"/>
+              <text x="40" y="136" fill="#CBD5E1" font-size="13">• 破除偽努力三大陷阱</text>
+              <text x="40" y="162" fill="#CBD5E1" font-size="13">• 搬運工 ➔ 建築師（三問法）</text>
+              <text x="40" y="188" fill="#CBD5E1" font-size="13">• 學習三單元：編碼/鞏固/提取</text>
+              <text x="40" y="214" fill="#CBD5E1" font-size="13">• 固化思維 ➔ 成長思維</text>
+              <rect x="38" y="290" width="214" height="50" rx="8" fill="#132E52" stroke="#F59E0B"/>
+              <text x="145" y="321" text-anchor="middle" fill="#FDE68A" font-size="15" font-weight="700">方向 × 方法 ＞ 努力</text>
+
+              <line x1="276" y1="195" x2="310" y2="195" stroke="#D97706" stroke-width="3" marker-end="url(#arr-gold)"/>
+
+              <!-- Stage 2 -->
+              <rect x="316" y="30" width="265" height="330" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+              <rect x="316" y="30" width="265" height="8" rx="4" fill="#1E3A8A"/>
+              <text x="336" y="64" fill="#1E3A8A" font-size="13" font-weight="700">STAGE 2 · 三步核心動作</text>
+              <text x="336" y="92" fill="#051C2C" font-size="18" font-weight="700">Ch2–4 內化閉環</text>
+              <rect x="336" y="114" width="225" height="68" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+              <text x="348" y="138" fill="#051C2C" font-size="14" font-weight="700">Ch2 理解知識</text>
+              <text x="348" y="160" fill="#475569" font-size="12">三步拆解・知識地圖</text>
+              <text x="548" y="140" text-anchor="end" fill="#D97706" font-size="12" font-weight="700">拆解+聯繫</text>
+
+              <rect x="336" y="192" width="225" height="68" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+              <text x="348" y="216" fill="#051C2C" font-size="14" font-weight="700">Ch3 記住知識</text>
+              <text x="348" y="238" fill="#475569" font-size="12">遺忘篩選・卡片長期系統</text>
+              <text x="548" y="218" text-anchor="end" fill="#D97706" font-size="12" font-weight="700">提取×間隔</text>
+
+              <rect x="336" y="270" width="225" height="68" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+              <text x="348" y="294" fill="#051C2C" font-size="14" font-weight="700">Ch4 運用知識</text>
+              <text x="348" y="316" fill="#475569" font-size="12">一題三變・手術檯錯題本</text>
+              <text x="548" y="296" text-anchor="end" fill="#D97706" font-size="12" font-weight="700">應用×反思</text>
+
+              <line x1="587" y1="195" x2="621" y2="195" stroke="#1E3A8A" stroke-width="3" marker-end="url(#arr-navy)"/>
+
+              <!-- Stage 3 -->
+              <rect x="627" y="30" width="245" height="330" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+              <rect x="627" y="30" width="245" height="8" rx="4" fill="#00A9F4"/>
+              <text x="647" y="64" fill="#0369A1" font-size="13" font-weight="700">STAGE 3 · 高效引擎</text>
+              <text x="647" y="92" fill="#051C2C" font-size="18" font-weight="700">Ch5–6 系統與輸出</text>
+              <rect x="647" y="118" width="205" height="104" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+              <text x="659" y="144" fill="#051C2C" font-size="14" font-weight="700">Ch5 建立學習系統</text>
+              <text x="659" y="168" fill="#475569" font-size="12">規劃・執行・總結三部曲</text>
+              <text x="659" y="190" fill="#475569" font-size="12">5 招微習慣・每月重構框架</text>
+              <text x="659" y="210" fill="#D97706" font-size="12.5" font-weight="700">公式：效率 ＝ 系統 × 習慣</text>
+
+              <rect x="647" y="236" width="205" height="104" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+              <text x="659" y="262" fill="#051C2C" font-size="14" font-weight="700">Ch6 穩定應對考試</text>
+              <text x="659" y="286" fill="#475569" font-size="12">三段節奏・止損點・分區草稿</text>
+              <text x="659" y="308" fill="#475569" font-size="12">卡尼曼均值回歸・決策覆盤</text>
+              <text x="659" y="328" fill="#D97706" font-size="12.5" font-weight="700">公式：成績 ＝ 知識 × 輸出</text>
+
+              <line x1="878" y1="195" x2="912" y2="195" stroke="#D97706" stroke-width="3" marker-end="url(#arr-gold)"/>
+
+              <!-- Stage 4 -->
+              <rect x="918" y="30" width="222" height="330" rx="12" fill="#FFFDF7" stroke="#F59E0B" stroke-width="1.8"/>
+              <text x="936" y="64" fill="#B45309" font-size="13" font-weight="700">STAGE 4 · 遷移與進化</text>
+              <text x="936" y="92" fill="#051C2C" font-size="18" font-weight="700">Ch7–8 終身槓桿</text>
+              <rect x="936" y="118" width="186" height="104" rx="8" fill="#FFFFFF" stroke="#FDE68A"/>
+              <text x="948" y="144" fill="#051C2C" font-size="14" font-weight="700">Ch7 五大學科本質</text>
+              <text x="948" y="168" fill="#475569" font-size="12">語數英・理化守恆・史政因果</text>
+              <text x="948" y="190" fill="#B45309" font-size="12" font-weight="700">高手 ＝ 找規律 × 建連接</text>
+              <text x="948" y="208" fill="#B45309" font-size="12" font-weight="700">× 能遷移</text>
+
+              <rect x="936" y="236" width="186" height="104" rx="8" fill="#051C2C"/>
+              <text x="948" y="262" fill="#7DD3FC" font-size="14" font-weight="700">Ch8 AI 時代學習力</text>
+              <text x="948" y="286" fill="#CBD5E1" font-size="12">4 種 AI 教練角色</text>
+              <text x="948" y="306" fill="#CBD5E1" font-size="12">三週學習方法迭代循環</text>
+              <text x="948" y="328" fill="#FBBF24" font-size="12" font-weight="700">競爭力 ＝ 第一性思考 × AI</text>
+            </svg>
+          </div>
+          <div class="callout-gold">
+            <strong>核心轉換：</strong>普通人把時間全花在「上課＋看書」的被動輸入端；《第一性原理學習法》將重心移往<strong>拆解結構、主動提取、系統運行與三週反饋迭代</strong>。
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》北辰（序言「這本書該怎麼用」及第 1–8 章）</span><span>McKinsey Pyramid Synthesis</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 3: CH1 PART 1 ==================== -->
+      <section class="slide" id="slide-3" data-kicker="第1章 · 方向校準" data-title="方向×方法＞努力：用三問法破除偽努力陷阱"
+        data-note-conclusion="第 1 章公式「方向 × 方法 ＞ 努力」：多數人並非不勤奮，而是陷入拼時長、湊數量與抄筆記三大「廉價努力」陷阱。"
+        data-note-evidence="書中「小A」整理六本工整錯題集卻僅排中等，因全無錯誤原因與考查要點思考。思想實驗：分散挖三個共約七米深坑仍無水，對準地下水源深挖八米即可見水。解方是「三問法」：一句話概括、連結舊知識近親、解決現實問題（如奶茶定價 $17.5 導數求極值）。"
+        data-note-transition="校準完方向後，第 4 頁將學習剝離至最底層的三個不可再分基本單元。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">02 · 第 1 章：方向 × 方法 ＞ 努力 <span class="archetype-badge">版型 6：對立論法 Opposition</span></div>
+            <h2 class="action-title">停止用「身體忙碌」代替「頭腦思考」：以三問法完成從搬運工到建築師的躍遷</h2>
+          </div>
+          <div class="slide-page-badge">P03 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 620 410" xmlns="http://www.w3.org/2000/svg" aria-label="挖井思想實驗：分散偽努力 vs 第一性深挖">
+                <text x="20" y="26" fill="#051C2C" font-size="15" font-weight="700">思想實驗：挖井理論（同樣 7–8 米深度，結果天壤之別）</text>
+                <!-- Left: 3 shallow pits -->
+                <rect x="20" y="45" width="280" height="240" rx="10" fill="#FEF2F2" stroke="#FCA5A5"/>
+                <text x="36" y="72" fill="#B91C1C" font-size="14" font-weight="700">✗ 偽努力：分散挖三個淺坑</text>
+                <line x1="36" y1="115" x2="284" y2="115" stroke="#94A3B8" stroke-width="2"/>
+                <rect x="52" y="115" width="50" height="55" fill="#475569"/>
+                <text x="77" y="186" text-anchor="middle" fill="#475569" font-size="11" font-weight="700">2.0 m</text>
+                <rect x="135" y="115" width="50" height="70" fill="#475569"/>
+                <text x="160" y="201" text-anchor="middle" fill="#475569" font-size="11" font-weight="700">2.5 m</text>
+                <rect x="218" y="115" width="50" height="65" fill="#475569"/>
+                <text x="243" y="196" text-anchor="middle" fill="#475569" font-size="11" font-weight="700">2.3 m</text>
+                <rect x="36" y="232" width="248" height="34" rx="6" fill="#B91C1C"/>
+                <text x="160" y="254" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">總計近 7 米 ➔ 依然不見水源</text>
+
+                <!-- Right: 1 deep well -->
+                <rect x="318" y="45" width="282" height="240" rx="10" fill="#F0FDFA" stroke="#5EEAD4"/>
+                <text x="334" y="72" fill="#0F766E" font-size="14" font-weight="700">✓ 建築師：看清地圖深挖一點</text>
+                <line x1="334" y1="115" x2="584" y2="115" stroke="#94A3B8" stroke-width="2"/>
+                <rect x="434" y="115" width="56" height="125" fill="#051C2C"/>
+                <rect x="434" y="218" width="56" height="22" fill="#00A9F4"/>
+                <text x="462" y="170" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">8.0 m</text>
+                <text x="515" y="233" fill="#0369A1" font-size="12" font-weight="700">湧出地下水</text>
+                <rect x="334" y="246" width="250" height="28" rx="6" fill="#0F766E"/>
+                <text x="459" y="265" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">先看地圖找方向 ➔ 集中打穿本質</text>
+
+                <!-- Bottom 3 questions -->
+                <rect x="20" y="302" width="580" height="94" rx="10" fill="#051C2C"/>
+                <text x="38" y="328" fill="#FBBF24" font-size="13.5" font-weight="700">轉型建築師的工具：「三問法」（學完任何概念立即執行）</text>
+                <text x="38" y="354" fill="#FFFFFF" font-size="12.5">① 一句話概括（小學生聽懂，如導數＝變化快慢）</text>
+                <text x="38" y="378" fill="#FFFFFF" font-size="12.5">② 連結舊知識近親（斜率、瞬時速度）   ③ 解決現實問題（奶茶定價 17.5 元收入最大）</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card red">
+                <h4>廉價努力的三大陷阱（用複製貼上麻痺自己）</h4>
+                <ul class="mck-list">
+                  <li><strong>陷阱 1 盲目拼時長：</strong>釘在座位好幾小時，實際專注時間極低。</li>
+                  <li><strong>陷阱 2 盲目湊數量：</strong>20 題對 15 題卻全是早會的，錯的 5 題只掃一眼答案。</li>
+                  <li><strong>陷阱 3 盲目記筆記：</strong>筆記如複印機般厚重（小A六本錯題本），知識卻越學越薄。</li>
+                </ul>
+              </div>
+              <div class="mck-card gold">
+                <h4>昂貴但真正有效的三件事</h4>
+                <ul class="mck-list">
+                  <li><strong>停下來：</strong>對錯多次的題目，坦率承認「我還不會」並追問考點。</li>
+                  <li><strong>合上書：</strong>憑記憶默寫出來，寫不出處才是該投入時間之處。</li>
+                  <li><strong>復盤路徑：</strong>不糾結答案對錯，反思「解題思路哪一步最關鍵」。</li>
+                </ul>
+              </div>
+              <div class="mck-card navy">
+                <h4>元認知（Metacognition）的分水嶺</h4>
+                <p>普通人問「這題怎麼做」；高手問「這是最優解嗎？我為什麼卡在這一步？」——學習的本質是<strong>重新構建</strong>，而非複製粘貼。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 1 章第 1–2 節（頁數與案例如小A、挖井、奶茶定價皆出自原文）</span><span>Archetype: Opposition + Visual Metaphor</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 4: CH1 PART 2 ==================== -->
+      <section class="slide" id="slide-4" data-kicker="第1章 · 學習基本單元" data-title="學習僅由編碼、鞏固、提取三單元與成長思維驅動"
+        data-note-conclusion="把學習拆到無法再分，只剩一件事：『從不知走向有知』；它由編碼、鞏固、提取三個基本單元構成，並受固化 vs 成長思維支配。"
+        data-note-evidence="艾賓浩斯 1885 年實驗：記 80 音節拜倫詩句約讀 9 次，記 80 無意義音節需近 80 次（編碼效率差約 9 倍）；分散三天學習達標只需重複 38 次，集中一天學習需 68 次（間隔效應省近一半力氣）。卡羅爾·德韋克實驗證實誇『聰明』使孩子挑簡單題，誇『努力』挑難題。池塘荷葉第 48 天滿塘，前一天第 47 天才是半塘。"
+        data-note-transition="理解了底層三單元，第 5 頁我們深入第一個單元『編碼與理解』：為什麼聽懂了卻做不出題？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">03 · 第 1 章：剝離表象至底層 <span class="archetype-badge">版型 1 + 2：實證與支柱</span></div>
+            <h2 class="action-title">學習僅由「編碼・鞏固・提取」三單元構成，且「成長思維」決定行為複利</h2>
+          </div>
+          <div class="slide-page-badge">P04 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" aria-label="艾賓浩斯雙實證對照與三基本單元">
+                <text x="20" y="24" fill="#051C2C" font-size="14.5" font-weight="700">艾賓浩斯 1885 經典實驗：意義編碼（9倍差）與間隔效應（省近半重複）</text>
+                <!-- Chart 1: Encoding -->
+                <rect x="20" y="42" width="282" height="170" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <text x="34" y="64" fill="#1E3A8A" font-size="13" font-weight="700">實驗 A：80 音節記憶所需次數</text>
+                <rect x="40" y="88" width="210" height="28" rx="4" fill="#94A3B8"/>
+                <text x="48" y="107" fill="#fff" font-size="12" font-weight="700">無意義音節 (BIV/ZOK) ≈ 80 次</text>
+                <rect x="40" y="132" width="26" height="28" rx="4" fill="#D97706"/>
+                <text x="74" y="151" fill="#B45309" font-size="12.5" font-weight="700">拜倫《唐璜》詩句 ≈ 9 次（快近 9 倍）</text>
+                <text x="34" y="192" fill="#475569" font-size="11.5">結論：大腦是「意義處理器」而非錄像機</text>
+
+                <!-- Chart 2: Spacing -->
+                <rect x="316" y="42" width="284" height="170" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <text x="330" y="64" fill="#1E3A8A" font-size="13" font-weight="700">實驗 B：12 音節隔日準確背出次數</text>
+                <rect x="336" y="88" width="220" height="28" rx="4" fill="#94A3B8"/>
+                <text x="344" y="107" fill="#fff" font-size="12" font-weight="700">集中一天突擊：68 次</text>
+                <rect x="336" y="132" width="123" height="28" rx="4" fill="#00A9F4"/>
+                <text x="466" y="151" fill="#0369A1" font-size="12.5" font-weight="700">分散三天：38 次</text>
+                <text x="330" y="192" fill="#475569" font-size="11.5">結論：間隔拉開重新激活，省力近一半</text>
+
+                <!-- 3 Fundamental Units -->
+                <rect x="20" y="228" width="580" height="162" rx="10" fill="#051C2C"/>
+                <text x="38" y="254" fill="#FBBF24" font-size="13.5" font-weight="700">學習不可再分的三大基本單元（任何無效學習必卡在其中一環）</text>
+                <rect x="38" y="270" width="170" height="104" rx="7" fill="#132E52"/>
+                <text x="50" y="294" fill="#7DD3FC" font-size="13.5" font-weight="700">1. 編碼 Encoding</text>
+                <text x="50" y="316" fill="#E2E8F0" font-size="11.5">賦予意義與連結舊知。</text>
+                <text x="50" y="336" fill="#94A3B8" font-size="11">卡點：看多遍仍不懂</text>
+                <text x="50" y="356" fill="#FDE68A" font-size="11">➔ 少頁深嚼勝過走神翻十頁</text>
+
+                <rect x="225" y="270" width="170" height="104" rx="7" fill="#132E52"/>
+                <text x="237" y="294" fill="#7DD3FC" font-size="13.5" font-weight="700">2. 鞏固 Consolidation</text>
+                <text x="237" y="316" fill="#E2E8F0" font-size="11.5">消退後隔天重捏濕沙成塊。</text>
+                <text x="237" y="336" fill="#94A3B8" font-size="11">卡點：當場懂過兩天忘</text>
+                <text x="237" y="356" fill="#FDE68A" font-size="11">➔ 隔幾天自推勝連看五遍</text>
+
+                <rect x="412" y="270" width="170" height="104" rx="7" fill="#1E3A8A" stroke="#F59E0B"/>
+                <text x="424" y="294" fill="#FBBF24" font-size="13.5" font-weight="700">3. 提取 Retrieval</text>
+                <text x="424" y="316" fill="#FFFFFF" font-size="11.5">費力拉扯加固神經通路。</text>
+                <text x="424" y="336" fill="#CBD5E1" font-size="11">卡點：聽懂卻做不出題</text>
+                <text x="424" y="356" fill="#7DD3FC" font-size="11">➔ 測試效應：想不出是好信號</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>為什麼學校教育容易失效？</h4>
+                <p>課堂講授、看書、看網課全集中在<strong>「編碼」</strong>一環；鞏固與提取被丟給學生摸索，多數人只好用題海與死記硬背硬撐，到了高中大學知識指數爆炸便觸頂失靈。</p>
+              </div>
+              <div class="mck-card gold">
+                <h4>德韋克實驗：固化思維 vs. 成長思維</h4>
+                <ul class="mck-list">
+                  <li><strong>被誇「很聰明」：</strong>擔心暴露缺陷 ➔ 多選保證成功的簡單題。</li>
+                  <li><strong>被誇「很努力」：</strong>視困難為變強契機 ➔ 主動挑戰有難度的題目。</li>
+                  <li><strong>一句話重構：</strong>把「我真笨」換成「我的卡點在哪裡」。</li>
+                </ul>
+              </div>
+              <div class="mck-card cyan">
+                <h4>指數思維警鐘：荷葉第 47 天</h4>
+                <p>荷葉每天翻倍、第 48 天鋪滿池塘，覆蓋一半不是第 24 天，而是<strong>第 47 天</strong>——學習改變的正是看待增長與追問「為什麼」的底層思維本能。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 1 章第 3–4 節（艾賓浩斯、測試效應、德韋克實驗、荷葉問題）</span><span>Formula: 方向 × 方法 ＞ 努力</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 5: CH2 UNDERSTANDING ==================== -->
+      <section class="slide" id="slide-5" data-kicker="第2章 · 理解 ＝ 拆解 ＋ 聯繫" data-title="理解不是聽懂流暢感，而是深層語義加工與三步拆解"
+        data-note-conclusion="第 2 章公式「理解 ＝ 拆解 ＋ 聯繫」：聽懂課只是坐在副駕駛座的流暢感錯覺；真正的理解必須自己走一遍，並達到複述、舉例或遷移層次。"
+        data-note-evidence="1975 年克雷克與圖爾文實驗：比較單詞大寫（外觀）、押韻（發音）、填入句子語境（含義），第三組記憶遠高出數倍。費曼五分鐘錄音法能立刻照出假懂卡點。複雜知識用「劃定邊界→找到支點→自己複述」拆解（如光合作用支點為能量轉化，牛頓第二定律支點為力改變運動狀態）。"
+        data-note-transition="當知識被拆解理解後，下一步是第 6 頁（第 3 章）：如何讓大腦主動把真正重要的知識留下來？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">04 · 第 2 章：理解 ＝ 拆解 ＋ 聯繫 <span class="archetype-badge">版型 4 + 5：階梯與拆解流</span></div>
+            <h2 class="action-title">破除「聽懂了」的副駕錯覺：用三步拆解法與知識地圖完成深層加工</h2>
+          </div>
+          <div class="slide-page-badge">P05 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="svg-box">
+              <svg viewBox="0 0 570 400" xmlns="http://www.w3.org/2000/svg" aria-label="1975 加工深度實驗與理解三層次">
+                <text x="18" y="26" fill="#051C2C" font-size="14.5" font-weight="700">1975 Craik &amp; Tulving 實驗：加工深度決定留存率</text>
+                <rect x="20" y="46" width="530" height="44" rx="6" fill="#F1F5F9"/>
+                <text x="32" y="73" fill="#475569" font-size="13" font-weight="700">L1 淺層外觀（是大寫字母嗎？）</text>
+                <rect x="340" y="56" width="52" height="24" rx="4" fill="#94A3B8"/>
+                <text x="402" y="73" fill="#64748B" font-size="12">寥寥無幾</text>
+
+                <rect x="20" y="100" width="530" height="44" rx="6" fill="#F1F5F9"/>
+                <text x="32" y="127" fill="#334155" font-size="13" font-weight="700">L2 中層發音（與 TRAIN 押韻嗎？）</text>
+                <rect x="340" y="110" width="110" height="24" rx="4" fill="#00A9F4"/>
+                <text x="460" y="127" fill="#0369A1" font-size="12">明顯增多</text>
+
+                <rect x="20" y="154" width="530" height="48" rx="6" fill="#FEF3C7" stroke="#F59E0B"/>
+                <text x="32" y="183" fill="#051C2C" font-size="13" font-weight="700">L3 深層語義（適合填入句子嗎？）</text>
+                <rect x="340" y="166" width="190" height="24" rx="4" fill="#D97706"/>
+                <text x="435" y="183" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">高出數倍！</text>
+
+                <text x="18" y="232" fill="#051C2C" font-size="14.5" font-weight="700">檢驗真懂的三層階梯（多數人停在記憶層，至少須達 L2）</text>
+                <rect x="20" y="250" width="166" height="134" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="34" y="276" fill="#1E3A8A" font-size="13.5" font-weight="700">① 能夠複述</text>
+                <text x="34" y="300" fill="#475569" font-size="12">完全不用書本術語，</text>
+                <text x="34" y="318" fill="#475569" font-size="12">用自己的話講給小學</text>
+                <text x="34" y="336" fill="#475569" font-size="12">生聽（5分鐘錄音法）</text>
+
+                <rect x="202" y="250" width="166" height="134" rx="8" fill="#E0F2FE" stroke="#00A9F4"/>
+                <text x="216" y="276" fill="#0369A1" font-size="13.5" font-weight="700">② 能夠舉例</text>
+                <text x="216" y="300" fill="#0F172A" font-size="12">舉出課本沒有的個人</text>
+                <text x="216" y="318" fill="#0F172A" font-size="12">生活實例（如用教小</text>
+                <text x="216" y="336" fill="#0F172A" font-size="12">朋友認貓類比機器學習）</text>
+
+                <rect x="384" y="250" width="166" height="134" rx="8" fill="#051C2C"/>
+                <text x="398" y="276" fill="#FBBF24" font-size="13.5" font-weight="700">③ 能夠遷移</text>
+                <text x="398" y="300" fill="#E2E8F0" font-size="12">跨場景應用（如將物</text>
+                <text x="398" y="318" fill="#E2E8F0" font-size="12">理「熵增」遷移到房</text>
+                <text x="398" y="336" fill="#E2E8F0" font-size="12">間未整理必變亂）</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card gold">
+                <h4>抓內核雙工具：五個為什麼 × 核心三問</h4>
+                <ul class="mck-list">
+                  <li><strong>連續追問到不可再拆：</strong>從「物價漲」連問 5 層到「錢多商品沒變多」的供需底層；或從機器停轉連問到「未裝過濾器」。</li>
+                  <li><strong>3 分鐘核心三問：</strong>① 一句話極簡定義（DNA＝遺傳信息存儲載體）② 它解決什麼問題 ③ 與哪個舊知識相似。</li>
+                </ul>
+              </div>
+              <div class="mck-card">
+                <h4>複雜知識塊「三步拆解法」</h4>
+                <ul class="mck-list">
+                  <li><strong>Step 1 劃定邊界：</strong>歸屬領域、核心功能、幾大部分（如光合作用＝光反應＋暗反應）。</li>
+                  <li><strong>Step 2 找到支點：</strong>追問出唯一支點（如「能量轉化」或「力改變運動狀態」），由此推導全部公式與細節。</li>
+                  <li><strong>Step 3 自己複述：</strong>合書從支點講起，卡處回翻重講直至流暢。</li>
+                </ul>
+              </div>
+              <div class="mck-card cyan">
+                <h4>從知識點升級為「知識地圖」</h4>
+                <p>不按課本順序抄筆記，而是拿白紙把核心問題放中央向外連接，問三題：<strong>關聯何物？解何問題？何處再逢？</strong>（如用近代發展道路問題串聯洋務、戊戌、辛亥、新文化）。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 2 章（Craik &amp; Tulving 1975、核心三問、三步拆解法、知識地圖）</span><span>Formula: 理解 ＝ 拆解 ＋ 聯繫</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 6: CH3 MEMORY ==================== -->
+      <section class="slide" id="slide-6" data-kicker="第3章 · 記憶 ＝ 提取 × 間隔" data-title="遺忘是智能篩選器，卡片系統讓記憶自動駕駛"
+        data-note-conclusion="第 3 章公式「記憶 ＝ 提取 × 間隔」：遺忘不是大腦漏水的洞，而是清理雜訊的篩選系統；用低門檻卡片系統替代消耗性的意志力。"
+        data-note-evidence="大腦記憶三大規律：① 強弱取決於提取次數而非輸入次數（開關在輸出端）；② 最佳提取點是「快忘未忘時」（學完當晚、次日、一週後）；③ 偏愛有意義的信息。低門檻起步：每天只做 3 張卡片（正面問題／背面答案）花 5 分鐘，記住就拉長間隔、卡住則放回第 3 天堆。"
+        data-note-transition="記住之後如何轉化為解決陌生難題的能力？第 7 頁進入第 4 章「運用與反思」。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">05 · 第 3 章：記憶 ＝ 提取 × 間隔 <span class="archetype-badge">版型 4 + 2：循環系統圖</span></div>
+            <h2 class="action-title">別與大腦天性對抗：順應「遺忘篩選」機制，以 3 張卡片啟動長期記憶系統</h2>
+          </div>
+          <div class="slide-page-badge">P06 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-45-55">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div class="mck-card navy">
+                <h4>顛覆常識：遺忘是設計，不是漏洞</h4>
+                <p>若大腦把看過的每張臉、每雙鞋全記住，將塞滿雜物無法調用關鍵訊息。<strong>遺忘幫你過濾雜音</strong>：被你反覆提取使用的知識會被打上「重要」高優先標籤保留；只輸入一次就丟著的自動清理。</p>
+              </div>
+              <div class="mck-card">
+                <h4>大腦記憶的三大底層鐵律</h4>
+                <ul class="mck-list">
+                  <li><strong>開關在輸出端：</strong>看十遍不如合書用力提取一次，考場糾結過的題記多年就是明證。</li>
+                  <li><strong>間隔激活勝突擊：</strong>考前灌滿一週後漏光；在快忘未忘時回想（當晚→次日→一週）最省力。</li>
+                  <li><strong>意義編碼入網絡：</strong>大腦不存孤立隨機數，喜歡與舊知識掛鉤的意義網。</li>
+                </ul>
+              </div>
+              <div class="callout-gold">
+                <strong>耐力系統 ＞ 爆發意志力：</strong>意志力用一點少一點；系統只需每天 5 分鐘、3 張卡片就能自動運轉。
+              </div>
+            </div>
+            <div class="svg-box">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="長期記憶卡片系統閉環">
+                <defs>
+                  <marker id="arr-c" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#00A9F4"/>
+                  </marker>
+                </defs>
+                <text x="20" y="26" fill="#051C2C" font-size="14.5" font-weight="700">低門檻卡片長期記憶系統（每天 3 張卡 × 5 分鐘自動駕駛）</text>
+                <!-- Step 1 -->
+                <rect x="30" y="55" width="160" height="120" rx="10" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="2"/>
+                <text x="110" y="84" text-anchor="middle" fill="#1E3A8A" font-size="14" font-weight="700">1. 收集 Collect</text>
+                <text x="110" y="110" text-anchor="middle" fill="#475569" font-size="12">從今日學習內容</text>
+                <text x="110" y="130" text-anchor="middle" fill="#475569" font-size="12">精選 3 個最核心點</text>
+                <text x="110" y="152" text-anchor="middle" fill="#0369A1" font-size="11.5" font-weight="700">零厚重筆記壓力</text>
+
+                <line x1="195" y1="115" x2="225" y2="115" stroke="#00A9F4" stroke-width="2.5" marker-end="url(#arr-c)"/>
+
+                <!-- Step 2 -->
+                <rect x="230" y="55" width="160" height="120" rx="10" fill="#FFFDF7" stroke="#D97706" stroke-width="2"/>
+                <text x="310" y="84" text-anchor="middle" fill="#B45309" font-size="14" font-weight="700">2. 加工 Process</text>
+                <text x="310" y="110" text-anchor="middle" fill="#0F172A" font-size="12">正面：寫一個問題</text>
+                <text x="310" y="130" text-anchor="middle" fill="#0F172A" font-size="12">背面：寫精煉答案</text>
+                <text x="310" y="152" text-anchor="middle" fill="#B45309" font-size="11.5" font-weight="700">提問本身即深加工</text>
+
+                <line x1="395" y1="115" x2="425" y2="115" stroke="#00A9F4" stroke-width="2.5" marker-end="url(#arr-c)"/>
+
+                <!-- Step 3 -->
+                <rect x="430" y="55" width="150" height="120" rx="10" fill="#051C2C"/>
+                <text x="505" y="84" text-anchor="middle" fill="#FBBF24" font-size="14" font-weight="700">3. 調度 Schedule</text>
+                <text x="505" y="110" text-anchor="middle" fill="#E2E8F0" font-size="12">先看正面努力回想</text>
+                <text x="505" y="130" text-anchor="middle" fill="#7DD3FC" font-size="12">記起 ➔ 延長間隔</text>
+                <text x="505" y="150" text-anchor="middle" fill="#FCA5A5" font-size="12">卡住 ➔ 縮短間隔</text>
+
+                <!-- Dynamic spacing branches -->
+                <rect x="30" y="205" width="550" height="175" rx="10" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="50" y="232" fill="#051C2C" font-size="13.5" font-weight="700">動態間隔提取時間軸（在「快忘記的臨界點」重啟神經連結）</text>
+                <circle cx="80" cy="285" r="24" fill="#1E3A8A"/>
+                <text x="80" y="290" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Day 0</text>
+                <text x="80" y="328" text-anchor="middle" fill="#475569" font-size="11">當晚首次提取</text>
+
+                <line x1="108" y1="285" x2="182" y2="285" stroke="#1E3A8A" stroke-width="2" marker-end="url(#arr-c)"/>
+                <circle cx="212" cy="285" r="24" fill="#00A9F4"/>
+                <text x="212" y="290" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Day 1</text>
+                <text x="212" y="328" text-anchor="middle" fill="#475569" font-size="11">次日開工前過卡</text>
+
+                <line x1="240" y1="285" x2="314" y2="285" stroke="#00A9F4" stroke-width="2" marker-end="url(#arr-c)"/>
+                <circle cx="344" cy="285" r="24" fill="#0F766E"/>
+                <text x="344" y="290" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Day 3</text>
+                <text x="344" y="328" text-anchor="middle" fill="#475569" font-size="11">失敗者回流此堆</text>
+
+                <line x1="372" y1="285" x2="446" y2="285" stroke="#D97706" stroke-width="2" marker-end="url(#arr-c)"/>
+                <circle cx="480" cy="285" r="28" fill="#D97706"/>
+                <text x="480" y="290" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Day 7+</text>
+                <text x="480" y="328" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">成功者進長時記憶</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 3 章（遺忘機制、三大規律、三張卡片系統）</span><span>Formula: 記憶 ＝ 提取 × 間隔</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 7: CH4 APPLICATION ==================== -->
+      <section class="slide" id="slide-7" data-kicker="第4章 · 能力 ＝ 應用 × 反思" data-title="以一題三變抽離題目骨架，把錯題本變越做越薄的手術檯"
+        data-note-conclusion="第 4 章公式「能力 ＝ 應用 × 反思」：刷題不是體力活完成任務，而是暴露弱點、一題三變榨乾價值，並把錯題消滅讓錯題本越來越薄。"
+        data-note-evidence="高效刷題五步：限時→標記拿不準→核對（只看存疑與錯題）→寫錯因三要點→隔天重做。一題三變：換數值、調條件（如兩直角邊改斜邊求邊）、交換條件結論（判斷直角三角形）。錯題本三誤區：抄寫式、收藏式、囤積式；替代法為直接在原卷畫圈與塗黑。"
+        data-note-transition="打通理解、記憶與運用後，第 8 頁看第 5 章：學霸如何用「系統與微習慣」讓學習天天自動運轉？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">06 · 第 4 章：能力 ＝ 應用 × 反思 <span class="archetype-badge">版型 5：診斷與結構抽離</span></div>
+            <h2 class="action-title">刷 10 道透徹題勝過盲刷 100 道：剝離「數字血肉」提煉可遷移骨架</h2>
+          </div>
+          <div class="slide-page-badge">P07 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="mck-card">
+              <h4>高效刷題五步閉環</h4>
+              <ul class="mck-list">
+                <li><strong>1. 限時實戰：</strong>到點停筆（如選擇 40 分），逼出真實抗壓水平。</li>
+                <li><strong>2. 標記存疑：</strong>猶豫或蒙對的題皆做記號。</li>
+                <li><strong>3. 精準核對：</strong>做對且穩的免看解析，精力全投錯題與存疑題。</li>
+                <li><strong>4. 三要點分析：</strong>錯在哪・正確思路・下次注意點。</li>
+                <li><strong>5. 隔天蓋住重做：</strong>驗證是否破除「看解析懂了」的假掌握。</li>
+              </ul>
+            </div>
+            <div class="mck-card gold">
+              <h4>一道題學出三道題：三種變法</h4>
+              <ul class="mck-list">
+                <li><strong>① 更換數值：</strong>3-4-5 改為 5-12-13 或 8-15-17，練熟計算。</li>
+                <li><strong>② 調整條件：</strong>已知兩直角邊求斜邊 ➔ 改給斜邊 13 與一邊 5 求另一邊（逆向用 c²-a²=b²）。</li>
+                <li><strong>③ 互換條件結論：</strong>改問「5, 12, 13 能否構成直角三角形？」從計算升級為邏輯判斷。</li>
+              </ul>
+            </div>
+            <div class="mck-card navy">
+              <h4>錯題本是手術檯，不是收藏室</h4>
+              <ul class="mck-list">
+                <li><strong>避開三誤區：</strong>抄寫式練字、收藏式看解析、囤積式越抄越厚不想翻。</li>
+                <li><strong>錯題四步手術：</strong>還原錯誤思路 → 區分知識性/方法性/習慣性錯誤 → 立即重做 → 隔天複查。</li>
+                <li><strong>極簡原卷法：</strong>題號旁畫紅圈寫一句錯因；隔天重做通過就<strong>把圈塗黑</strong>，三個月消滅至只剩一兩道頑固題。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="svg-box" style="height:175px;">
+            <svg viewBox="0 0 1120 155" xmlns="http://www.w3.org/2000/svg" aria-label="舉一反三：剝離外層血肉，提煉內層骨架">
+              <rect x="15" y="14" width="310" height="126" rx="10" fill="#F1F5F9" stroke="#CBD5E1"/>
+              <text x="34" y="42" fill="#475569" font-size="13.5" font-weight="700">外層血肉（千變萬化的包裝）</text>
+              <text x="34" y="68" fill="#334155" font-size="12.5">• 靜止自由墜落 3 秒求速度</text>
+              <text x="34" y="90" fill="#334155" font-size="12.5">• 汽車 20 m/s 剎車 2 秒求速度</text>
+              <text x="34" y="112" fill="#334155" font-size="12.5">• 10 m/s 豎直上拋 1 秒求速度</text>
+
+              <line x1="335" y1="77" x2="395" y2="77" stroke="#D97706" stroke-width="3"/>
+              <polygon points="395,71 407,77 395,83" fill="#D97706"/>
+              <text x="371" y="62" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">剝離數值</text>
+
+              <rect x="412" y="14" width="300" height="126" rx="10" fill="#051C2C"/>
+              <text x="562" y="44" text-anchor="middle" fill="#FBBF24" font-size="14" font-weight="700">內層骨架（穩定不變的底層模型）</text>
+              <text x="562" y="82" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="800">v = v₀ + a·t</text>
+              <text x="562" y="112" text-anchor="middle" fill="#7DD3FC" font-size="12">已知初速度、加速度與時間求末速度</text>
+
+              <line x1="722" y1="77" x2="782" y2="77" stroke="#00A9F4" stroke-width="3"/>
+              <polygon points="782,71 794,77 782,83" fill="#00A9F4"/>
+              <text x="758" y="62" text-anchor="middle" fill="#0369A1" font-size="11" font-weight="700">替換要素</text>
+
+              <rect x="800" y="14" width="305" height="126" rx="10" fill="#FFFDF7" stroke="#F59E0B" stroke-width="1.5"/>
+              <text x="820" y="42" fill="#B45309" font-size="13.5" font-weight="700">跨題遷移（舉一反三能力）</text>
+              <text x="820" y="68" fill="#0F172A" font-size="12.5">• 改勻加速為變加速 ➔ 積分思維</text>
+              <text x="820" y="90" fill="#0F172A" font-size="12.5">• 三角形內角和 180° 骨架 ➔ 推導</text>
+              <text x="820" y="112" fill="#0F172A" font-size="12.5">  n 邊形內角和 (n−2) × 180°</text>
+            </svg>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 4 章（五步刷題、一題三變、手術檯錯題本、骨架與血肉）</span><span>Formula: 能力 ＝ 應用 × 反思</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 8: CH5 SYSTEM & HABITS ==================== -->
+      <section class="slide" id="slide-8" data-kicker="第5章 · 效率 ＝ 系統 × 習慣" data-title="把決策前置為行動指南與五招微習慣，消除啟動內耗"
+        data-note-conclusion="第 5 章公式「效率 ＝ 系統 × 習慣」：學霸不是意志力更強，而是透過系統把「今天該做什麼」的決策提前完成，再用低阻力習慣自動執行。"
+        data-note-evidence="小林同學案例：寫「高數複習」在書桌前猶豫十分鐘玩起手機；改為「19:00-19:40 做完第三章第 1-8 題」立刻零焦慮執行。知識體系四步：搭框架→用為什麼銜接（如歐姆定律推力與阻力）→解決認知衝突（真空羽毛與鐵球）→每月重構（如按土地賦役制度重串朝代）。習慣五招：絕不失敗小目標（5個單詞/1道題）、啟動開關、允許每週偷懶額度、日曆連勝鏈條、提前攤開書本減阻力。"
+        data-note-transition="系統平時運轉順暢後，第 9 頁看第 6 章：如何在高壓考場把已會的知識 100% 穩定輸出？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">07 · 第 5 章：效率 ＝ 系統 × 習慣 <span class="archetype-badge">版型 2 + 4：系統引擎架構</span></div>
+            <h2 class="action-title">執行比臨時做決定省力十倍：以「明日行動指南＋五招微習慣」打造自動飛輪</h2>
+          </div>
+          <div class="slide-page-badge">P08 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>學習系統三部曲 &amp; 有效計劃三原則</h4>
+                <ul class="mck-list">
+                  <li><strong>規劃（不是許願單）：</strong>把「學高數」改寫為「19:00–19:40 做第三章第 1–8 題」。</li>
+                  <li><strong>三原則：</strong>① 只寫明天的事 ② 設截止時間（到點停）③ 留 0.5–1 小時機動緩衝。</li>
+                  <li><strong>執行與總結：</strong>兩分鐘即可上手；每晚花 10 分鐘覆盤優化明日流程。</li>
+                </ul>
+              </div>
+              <div class="mck-card cyan">
+                <h4>個人知識體系四步搭建法</h4>
+                <ul class="mck-list">
+                  <li><strong>1. 先搭書架：</strong>找章節高頻詞畫關係圖（如「力改變物體運動」）。</li>
+                  <li><strong>2. 用「為什麼」接通：</strong>從歐姆定律 I=U/R 追問到電壓推力與電阻碰撞。</li>
+                  <li><strong>3. 擁抱認知衝突：</strong>用思想實驗解開「鐵球與羽毛真空同時落地」。</li>
+                  <li><strong>4. 每月主題重構：</strong>把朝代時間線重構為「井田→均田→一條鞭法」專題線。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="svg-box">
+              <svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" aria-label="不用硬撐的五招習慣設計">
+                <text x="16" y="26" fill="#051C2C" font-size="14.5" font-weight="700">不靠意志力的 5 招習慣工程（把堅持設計成一場遊戲）</text>
+                <rect x="16" y="46" width="528" height="60" rx="8" fill="#051C2C"/>
+                <text x="34" y="72" fill="#FBBF24" font-size="13.5" font-weight="700">① 縮小到「絕不可能失敗」</text>
+                <text x="34" y="94" fill="#E2E8F0" font-size="12">背 5 個單詞 / 做 1 道題 / 跑 10 分鐘 ➔ 零心理壓力自然超額完成</text>
+
+                <rect x="16" y="116" width="528" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="34" y="142" fill="#1E3A8A" font-size="13.5" font-weight="700">② 配上「啟動開關」消除猶豫</text>
+                <text x="34" y="164" fill="#475569" font-size="12">固定時間（18:00 鬧鐘）或行為觸發（洗完澡開書）➔ 坐下即跨過最難一關</text>
+
+                <rect x="16" y="186" width="528" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <text x="34" y="212" fill="#1E3A8A" font-size="13.5" font-weight="700">③ 允許自己擁有「偷懶額度」</text>
+                <text x="34" y="234" fill="#475569" font-size="12">破除非黑即白完美主義：每週留 1–2 天緩衝，反而走得更久不斷鏈</text>
+
+                <rect x="16" y="256" width="528" height="60" rx="8" fill="#FFFDF7" stroke="#F59E0B"/>
+                <text x="34" y="282" fill="#B45309" font-size="13.5" font-weight="700">④ 視覺化「連勝鏈條」即時反饋</text>
+                <text x="34" y="304" fill="#334155" font-size="12">日曆打勾或畫叉連成鏈子（Don't Break the Chain），捨不得讓連勝斷掉</text>
+
+                <rect x="16" y="326" width="528" height="60" rx="8" fill="#E0F2FE" stroke="#00A9F4"/>
+                <text x="34" y="352" fill="#0369A1" font-size="13.5" font-weight="700">⑤ 降低環境阻力 × 隱藏干擾源</text>
+                <text x="34" y="374" fill="#0F172A" font-size="12">睡前把明日練習冊翻好放桌中央；手機放另一間房，坐下即啟動</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 5 章（小林計劃案例、知識體系四步、五招習慣）</span><span>Formula: 效率 ＝ 系統 × 習慣</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 9: CH6 EXAM OUTPUT ==================== -->
+      <section class="slide" id="slide-9" data-kicker="第6章 · 成績 ＝ 知識 × 輸出" data-title="把考試當高壓穩定輸出：三段式節奏與均值回歸覆盤"
+        data-note-conclusion="第 6 章公式「成績 ＝ 知識 × 輸出」：『平時會、考試廢』源於缺乏限時閉卷混合訓練與臨場節奏控管；覆盤核心是把『運氣』與『實力』徹底分開。"
+        data-note-evidence="李明案例：五張考卷每張至少 15 分本來會做卻因計算、漏條件與時間失衡丟分。臨場四招：20 題讀前半句練條件反射、考前掃卷預熱、草稿紙摺疊分區標題號（少丟 5-10 分）、4-7-8 呼吸法。三段式節奏：開局 1/5 熱身搶分、中局 3/5 攻堅、收官 1/5 掃尾；止損點：選擇 2 分／填空 3 分／大題 5 分。引卡尼曼《思考，快與慢》飛行教官「迴歸均值」實驗，指出覆盤必須還原決策過程而非把粗心當籮筐。"
+        data-note-transition="解決了通用學習引擎，第 10 頁看第 7 章：如何用第一性原理一口氣打通語、數、英、理化、史政所有學科？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">08 · 第 6 章：成績 ＝ 知識 × 輸出 <span class="archetype-badge">版型 4 + 5：節奏鏈與覆盤診斷</span></div>
+            <h2 class="action-title">考場較量的是壓力下穩定輸出：設計「1/5–3/5–1/5 節奏」與三步決策覆盤</h2>
+          </div>
+          <div class="slide-page-badge">P09 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="svg-box" style="height:155px;">
+            <svg viewBox="0 0 1120 138" xmlns="http://www.w3.org/2000/svg" aria-label="考試三段式節奏與止損點">
+              <rect x="20" y="18" width="215" height="96" rx="8" fill="#E0F2FE" stroke="#00A9F4" stroke-width="1.5"/>
+              <text x="36" y="42" fill="#0369A1" font-size="13.5" font-weight="700">開局 · 前 1/5 時間</text>
+              <text x="36" y="66" fill="#051C2C" font-size="13" font-weight="700">任務：熱身 ＋ 穩拿基礎分</text>
+              <text x="36" y="88" fill="#334155" font-size="11.5">開卷先掃描全卷分難度，不硬碰硬</text>
+              <text x="36" y="104" fill="#0369A1" font-size="11">喚醒大腦進入狀態</text>
+
+              <rect x="250" y="18" width="540" height="96" rx="8" fill="#051C2C"/>
+              <text x="270" y="42" fill="#FBBF24" font-size="13.5" font-weight="700">中局 · 中間 3/5 黃金精力時間</text>
+              <text x="270" y="66" fill="#FFFFFF" font-size="13" font-weight="700">任務：攻堅中高難度大題 ＋ 嚴格執行「止損點」跳題</text>
+              <rect x="270" y="78" width="500" height="24" rx="5" fill="#132E52"/>
+              <text x="520" y="94" text-anchor="middle" fill="#7DD3FC" font-size="11.5" font-weight="700">止損紀律：選擇 &gt;2 分鐘跳 │ 填空 &gt;3 分鐘跳 │ 大題 &gt;5 分鐘無思路即標記跳過</text>
+
+              <rect x="805" y="18" width="295" height="96" rx="8" fill="#FFFDF7" stroke="#D97706" stroke-width="1.8"/>
+              <text x="822" y="42" fill="#B45309" font-size="13.5" font-weight="700">收官 · 後 1/5 時間</text>
+              <text x="822" y="66" fill="#051C2C" font-size="13" font-weight="700">任務：回攻標記題 ＋ 倒序核查</text>
+              <text x="822" y="88" fill="#334155" font-size="11.5">由後往前或只查計算量大步驟，</text>
+              <text x="822" y="104" fill="#B45309" font-size="11">破除順看視覺盲區（對照防跳步清單）</text>
+            </svg>
+          </div>
+          <div class="grid-3">
+            <div class="mck-card">
+              <h4>平時「限時・閉卷・混合」模擬</h4>
+              <ul class="mck-list">
+                <li>消除平時無時限、隨時翻書、單任務導致的考場滑落。</li>
+                <li><strong>條件反射訓練：</strong>找 20 道同類題只讀前半句，秒說解題思路省大腦帶寬。</li>
+                <li><strong>分區草稿紙：</strong>摺疊分區標題號不跳步，考場少丟 5–10 分。</li>
+                <li><strong>4-7-8 呼吸法：</strong>慌張時吸 4 秒・屏 7 秒・呼 8 秒降心率。</li>
+              </ul>
+            </div>
+            <div class="mck-card red">
+              <h4>別讓「粗心」當藉口：錯因三分類</h4>
+              <ul class="mck-list">
+                <li><strong>知識性錯誤：</strong>未學或概念混淆 ➔ 回課本重構。</li>
+                <li><strong>方法性錯誤：</strong>如該用韋達定理卻用判別式 ➔ 對比標準路徑。</li>
+                <li><strong>習慣性錯誤：</strong>「會做卻做錯」最該搶救！記錄心理觸發模式（急躁看錯號/疲勞算錯數/盲信跳步）。</li>
+              </ul>
+            </div>
+            <div class="mck-card gold">
+              <h4>卡尼曼「迴歸均值」與覆盤三步</h4>
+              <p>飛行教官誤將自然均值回歸當成「批評比表揚有效」。覆盤須區分運氣與實力：</p>
+              <ul class="mck-list">
+                <li><strong>① 驗真掌握：</strong>改題目條件還能對嗎？抓出蒙對的虛假掌握。</li>
+                <li><strong>② 定性分類：</strong>歸入知識/方法/習慣檔。</li>
+                <li><strong>③ 還原決策：</strong>寫出「當時看到 X 就誤選 Y」的思維慣性。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 6 章（李明案例、4-7-8呼吸、防跳步清單、三段節奏、卡尼曼均值回歸）</span><span>Formula: 成績 ＝ 知識 × 輸出</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 10: CH7 ALL SUBJECTS ==================== -->
+      <section class="slide" id="slide-10" data-kicker="第7章 · 跨學科公理圖譜" data-title="高手＝找規律×建連接×能遷移：五大主科的底層原理"
+        data-note-conclusion="第 7 章公式「高手 ＝ 找規律 × 建連接 × 能遷移」：任何學科追到極致，都是極少數幾條公理、守恆律與因果鏈，學會它們即可大幅減少死記硬背。"
+        data-note-evidence="語文＝邏輯（句間因果/遞進/轉折繩索）＋共情（細節替換不用空洞形容詞）；數學＝從公理（如平行公理/SSS）三步自推一切公式（如勾股定理←相似←平行公理）；英語＝先大聲朗讀 15 分鐘養語感→換詞造句→對照修錯；理化＝體重秤吸氣浮力抵消引入質能、能量、電荷、動量四大守恆宇宙總賬本；史政＝多因多果因果網取代孤立時間珠串（如鴉片戰爭與辛亥革命因果鏈）。"
+        data-note-transition="打通了人腦的跨學科學習法，第 11 頁進入最關鍵的時代命題：在 AI 已經會解題寫作的今天，該如何與 AI 共學？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">09 · 第 7 章：高手 ＝ 找規律 × 建連接 × 能遷移 <span class="archetype-badge">版型 5：跨學科第一性矩陣</span></div>
+            <h2 class="action-title">一切學科皆可還原為底層公理：從背幾百條規則轉為掌握五把萬能鑰匙</h2>
+          </div>
+          <div class="slide-page-badge">P10 / 15</div>
+        </div>
+        <div class="slide-body">
+          <table class="mck-table">
+            <thead>
+              <tr>
+                <th style="width:14%;">學科領域</th>
+                <th style="width:24%;">第一性原理（底層本質）</th>
+                <th style="width:28%;">常見低效誤區（逆向而行）</th>
+                <th style="width:34%;">三步／兩步實戰操作法</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>語文表達</strong></td>
+                <td class="hl">邏輯 ＋ 共情</td>
+                <td>只堆「首先其次」連接詞；只寫「好感動、很辛苦」空洞形容詞</td>
+                <td><strong>句子接龍：</strong>每句與前句必須為因果/遞進/轉折關係；<strong>細節替換：</strong>用「冬天洗碗手上裂口」讓讀者自己感受</td>
+              </tr>
+              <tr>
+                <td><strong>數學推演</strong></td>
+                <td class="hl">少數公理推出一切公式</td>
+                <td>孤立死背上百個公式與幾何定理，題目變形即卡死</td>
+                <td><strong>三步吃透公式：</strong>① 溯源至母定理與公理 ② 蓋書從公理手推兩遍 ③ 寫路徑鏈（如勾股←相似←平行線←平行公理）</td>
+              </tr>
+              <tr>
+                <td><strong>英語習得</strong></td>
+                <td class="hl">語感先行，語法自生</td>
+                <td>沒見過足夠正確句子就死背主謂賓語法條文，學了不敢開口</td>
+                <td><strong>順序倒轉：</strong>① 每日大聲朗讀 200 詞短文三遍（眼嘴耳同調）② 換詞法批量造句（10組×3替換）③ 譯文對照修冠詞介詞</td>
+              </tr>
+              <tr>
+                <td><strong>物理／化學</strong></td>
+                <td class="hl">四大守恆是宇宙總賬本</td>
+                <td>孤立背誦幾十個定理與化學反應現象，忽略背後的收支平衡</td>
+                <td><strong>兩步記賬法：</strong>① 歸類至「質能・能量・電荷・動量」四大守恆（體重秤憋氣浮力抵消）② 用白話講清這筆賬如何平</td>
+              </tr>
+              <tr>
+                <td><strong>歷史／政治</strong></td>
+                <td class="hl">多因多果網狀因果鏈</td>
+                <td>像串珠子一樣死記孤立年代與條約，答不出跨事件關聯題</td>
+                <td><strong>兩件事：</strong>① 從事件往前追直接/根本原因（如工業革命逆差→鴉片→南京條約→太平天國），往後推近遠影響 ② 脫稿複述因果鏈</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout-navy">
+            <strong>跨科共性啟示：</strong>十年後具體的課本公式都會淡忘，但數學教會你的「從公理推演」、語文教會你的「邏輯與細節」、理化教會你的「守恆視角」、史政教會你的「因果網」會成為終身可遷移的底氣。
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 7 章（語文、數學、英語、物理/化學、歷史/政治五節）</span><span>Formula: 高手 ＝ 找規律 × 建連接 × 能遷移</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 11: CH8 PART 1 AI ROLES ==================== -->
+      <section class="slide" id="slide-11" data-kicker="第8章 · AI 時代學習革命" data-title="拒把 AI 當搜題代寫機，升級為蘇格拉底陪練與辯手"
+        data-note-conclusion="把 AI 當「加強版搜尋引擎」只會讓大腦退化；正確做法是透過提示詞約束 AI 扮演陪練、辯手、對比助手與出題老師，專門訓練思考肌肉。"
+        data-note-evidence="書中給出具體提示詞與場景：陪練不直接給答案而是引導二次函數求解；辯手針對「禁止帶手機」給三條事實反駁打破確認偏誤；整理助手先自己理一遍再對比差異；出題老師加設「陷阱題」批改；以及蘇格拉底追問推導「浮力＝上下表面壓強差」與「牽手類比化學鍵」。同時警示 AI 會算錯或編造歷史，切忌過度依賴。"
+        data-note-transition="除了讓 AI 陪練，第 12 頁將呈現第 8 章的最後一塊拼圖：如何用「三週循環」持續進化自己的學習方法？">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">10 · 第 8 章：AI 學習搭子與思維訓練 <span class="archetype-badge">版型 8：2×2 AI 角色矩陣</span></div>
+            <h2 class="action-title">AI 給得起答案卻給不了能力：把 AI 從「代寫機」重構為四大思維教練</h2>
+          </div>
+          <div class="slide-page-badge">P11 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="split-55-45">
+            <div class="svg-box">
+              <svg viewBox="0 0 610 400" xmlns="http://www.w3.org/2000/svg" aria-label="AI 四大高階學習角色矩陣">
+                <text x="18" y="24" fill="#051C2C" font-size="14.5" font-weight="700">AI 的四種高槓桿用法（前提：由你的大腦主導思考）</text>
+                <!-- Quadrant 1 -->
+                <rect x="18" y="42" width="282" height="162" rx="10" fill="#051C2C"/>
+                <text x="36" y="70" fill="#7DD3FC" font-size="14" font-weight="700">1. 蘇格拉底式陪練（非代寫）</text>
+                <text x="36" y="96" fill="#E2E8F0" font-size="12">指令：「別直接給答案，每次問一題</text>
+                <text x="36" y="114" fill="#E2E8F0" font-size="12">引導我推導，卡住時只給小提示。」</text>
+                <rect x="36" y="132" width="246" height="54" rx="6" fill="#132E52"/>
+                <text x="48" y="154" fill="#FBBF24" font-size="11.5" font-weight="700">訓練目標：思考與推演過程</text>
+                <text x="48" y="174" fill="#CBD5E1" font-size="11">例：引導推導水深壓強差產生浮力</text>
+
+                <!-- Quadrant 2 -->
+                <rect x="312" y="42" width="280" height="162" rx="10" fill="#FFFDF7" stroke="#D97706" stroke-width="1.8"/>
+                <text x="330" y="70" fill="#B45309" font-size="14" font-weight="700">2. 理性辯論對手（非附和者）</text>
+                <text x="330" y="96" fill="#334155" font-size="12">指令：「針對我的觀點，站對立面給</text>
+                <text x="330" y="114" fill="#334155" font-size="12">三個有事實與邏輯支撐的反駁。」</text>
+                <rect x="330" y="132" width="244" height="54" rx="6" fill="#FEF3C7"/>
+                <text x="342" y="154" fill="#B45309" font-size="11.5" font-weight="700">訓練目標：打破「確認偏誤」</text>
+                <text x="342" y="174" fill="#475569" font-size="11">例：正反辯論校園手機與早自習存廢</text>
+
+                <!-- Quadrant 3 -->
+                <rect x="18" y="218" width="282" height="162" rx="10" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="1.8"/>
+                <text x="36" y="246" fill="#1E3A8A" font-size="14" font-weight="700">3. 對比整理助手（非存儲盒）</text>
+                <text x="36" y="272" fill="#334155" font-size="12">動作：先自己整理一版亂筆記，再</text>
+                <text x="36" y="290" fill="#334155" font-size="12">與 AI 版本比對分類與遺漏重點。</text>
+                <rect x="36" y="308" width="246" height="54" rx="6" fill="#E0F2FE"/>
+                <text x="48" y="330" fill="#0369A1" font-size="11.5" font-weight="700">訓練目標：對比學習結構盲點</text>
+                <text x="48" y="350" fill="#0F172A" font-size="11">只記住「我與 AI 的差異點」</text>
+
+                <!-- Quadrant 4 -->
+                <rect x="312" y="218" width="280" height="162" rx="10" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.8"/>
+                <text x="330" y="246" fill="#0F766E" font-size="14" font-weight="700">4. 私人出題與批改官</text>
+                <text x="330" y="272" fill="#334155" font-size="12">指令：「依我剛學的概念出 5 道漸</text>
+                <text x="330" y="290" fill="#334155" font-size="12">進題，批改後再加一道陷阱題。」</text>
+                <rect x="330" y="308" width="244" height="54" rx="6" fill="#CCFBF1"/>
+                <text x="342" y="330" fill="#0F766E" font-size="11.5" font-weight="700">訓練目標：按需難度提取訓練</text>
+                <text x="342" y="350" fill="#134E4A" font-size="11">隨時出題・即時反饋・不厭其煩</text>
+              </svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;">
+              <div class="mck-card">
+                <h4>用 AI 鍛鍊四種核心思維習慣</h4>
+                <ul class="mck-list">
+                  <li><strong>① 練「追問」：</strong>蘇格拉底式逐問推導原理（例：浮力產生原因）。</li>
+                  <li><strong>② 練「拆解」：</strong>請 AI 拆出 3–5 個子問題（如 AI 作文五問），自己逐一回答成文。</li>
+                  <li><strong>③ 練「反駁」：</strong>主動尋找反對證據，治癒只看支持證據的偏執。</li>
+                  <li><strong>④ 練「類比」：</strong>將抽象概念類比生活事物（電流＝水流；化學鍵＝兩人手拉手、強者搶手為置換反應）。</li>
+                </ul>
+              </div>
+              <div class="mck-card red">
+                <h4>必須警惕的 AI 兩大反噬風險</h4>
+                <ul class="mck-list">
+                  <li><strong>事實幻覺：</strong>AI 可能算錯數學題、編造歷史事件、張冠李戴。</li>
+                  <li><strong>思考萎縮：</strong>過度依賴現成答案會讓自己越來越懶得動腦。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 8 章第 1–2 節（四種用法、浮力蘇格拉底對話、化學鍵類比、風險警示）</span><span>Formula: 未來競爭力 ＝ 第一性思考 × AI</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 12: CH8 PART 2 ITERATION ==================== -->
+      <section class="slide" id="slide-12" data-kicker="第8章 · 持續方法進化" data-title="未來競爭力＝第一性思考×AI：三週循環讓學習方法年迭代十餘版"
+        data-note-conclusion="第 8 章公式「未來競爭力 ＝ 第一性思考 × AI」：不存在一勞永逸的完美方法；透過「第1週測量→第2週單點微調→第3週對比固化」的三週循環，一年即可迭代十幾個版本。"
+        data-note-evidence="書中列出兩大阻礙調整的原因：改變太彆扭、以及壓根不知自己方法有問題。三週示範案例：中考學生第1週發現每天刷數學1小時正確率僅 60%（效率打2分）；第2週假設『缺複習』改為先復習例題10分鐘＋做題50分鐘，正確率升至 80%；第3週對比數據固化進方法庫。還可把低效現狀發給 AI 索取假設（如「睡前複習＋早起回憶」）。"
+        data-note-transition="全書 8 章內容至此完全展開。第 13 頁我們把整本書的因果邏輯串成一條完整脈絡。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">11 · 第 8 章：三週學習方法迭代循環 <span class="archetype-badge">版型 4 + 1：PDCA 科學實驗閉環</span></div>
+            <h2 class="action-title">別找「一輩子不變的方法」：以三週實驗循環＋AI 假設加速自我進化</h2>
+          </div>
+          <div class="slide-page-badge">P12 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="svg-box" style="height:215px;">
+            <svg viewBox="0 0 1120 190" xmlns="http://www.w3.org/2000/svg" aria-label="三週學習方法迭代循環">
+              <defs>
+                <marker id="arr-it" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#D97706"/>
+                </marker>
+              </defs>
+              <!-- Week 1 -->
+              <rect x="20" y="20" width="320" height="150" rx="10" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="2"/>
+              <text x="38" y="48" fill="#1E3A8A" font-size="15" font-weight="700">Week 1｜只記錄，不評判不改動</text>
+              <text x="38" y="76" fill="#334155" font-size="12.5">睡前 3 分鐘記錄連續 7 天：</text>
+              <text x="38" y="100" fill="#334155" font-size="12">1. 今天學了什麼內容？</text>
+              <text x="38" y="122" fill="#334155" font-size="12">2. 每項耗時多久？</text>
+              <text x="38" y="144" fill="#0369A1" font-size="12" font-weight="700">3. 效率評分（1–5 分）➔ 抓出最低分瓶頸</text>
+
+              <line x1="346" y1="95" x2="384" y2="95" stroke="#D97706" stroke-width="3" marker-end="url(#arr-it)"/>
+
+              <!-- Week 2 -->
+              <rect x="392" y="20" width="330" height="150" rx="10" fill="#FFFDF7" stroke="#D97706" stroke-width="2"/>
+              <text x="410" y="48" fill="#B45309" font-size="15" font-weight="700">Week 2｜挑最低分點，單點微調</text>
+              <text x="410" y="76" fill="#334155" font-size="12.5">針對最低分點提「單一可執行假設」：</text>
+              <text x="410" y="100" fill="#334155" font-size="12">• 早背單詞僅 2 分 ➔ 改為「睡前背＋早起回憶」</text>
+              <text x="410" y="122" fill="#334155" font-size="12">• 數學錯題多 ➔ 改為「先複習例題10分＋做50分」</text>
+              <text x="410" y="144" fill="#B45309" font-size="12" font-weight="700">可向 AI 描述現狀，獲取科學改進假設</text>
+
+              <line x1="728" y1="95" x2="766" y2="95" stroke="#D97706" stroke-width="3" marker-end="url(#arr-it)"/>
+
+              <!-- Week 3 -->
+              <rect x="774" y="20" width="326" height="150" rx="10" fill="#051C2C"/>
+              <text x="794" y="48" fill="#FBBF24" font-size="15" font-weight="700">Week 3｜數據對比，固化或重試</text>
+              <text x="794" y="76" fill="#E2E8F0" font-size="12.5">把第 1 週與第 2–3 週數據並排比較：</text>
+              <text x="794" y="102" fill="#7DD3FC" font-size="13" font-weight="700">• 實例：數學正確率 60% ➔ 80%</text>
+              <text x="794" y="126" fill="#E2E8F0" font-size="12">有效即寫入「個人方法庫」固化；無效換假設</text>
+              <text x="794" y="148" fill="#FDE68A" font-size="12" font-weight="700">3 週一循環 ➔ 一年迭代十幾個版本！</text>
+            </svg>
+          </div>
+          <div class="grid-2">
+            <div class="mck-card red">
+              <h4>為什麼多數人明知低效卻不調整？</h4>
+              <ul class="mck-list">
+                <li><strong>改變太彆扭：</strong>寧願待在低效但熟悉踏實的舒適軌道，不願忍受幾天的調整不適應。</li>
+                <li><strong>缺乏自我打量：</strong>沒人教過更好的路子，誤以為學習本來就該痛苦低效。</li>
+              </ul>
+            </div>
+            <div class="mck-card navy">
+              <h4>結語核心主張：學會學習是唯一的鐵飯碗</h4>
+              <p>今天記住的課本知識，十年後多半過時或被 AI 取代；但<strong>「回到原點拆解＋三週持續迭代」</strong>的學習能力，能讓你跨入任何全新行業都擁有不可替代的底氣。</p>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 8 章第 3 節及結語（三週改進計劃、中考數學案例、睡前複習法）</span><span>Formula: 未來競爭力 ＝ 第一性思考 × AI</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 13: SYNTHESIS ==================== -->
+      <section class="slide" id="slide-13" data-kicker="全書邏輯串聯" data-title="從校準方向到動態進化，八章構成層層遞進的複利閉環"
+        data-note-conclusion="全書八章不是並列清單，而是嚴密的因果推演鏈：沒有方向校準，後面的記憶和刷題全在加速走偏；沒有系統與輸出，理解就無法兌現為成果；沒有 AI 時代的三週迭代，系統就會在未來老化。"
+        data-note-evidence="從第 1 章「方向×方法＞努力」破題，立下編碼-鞏固-提取三根柱子；第 2-4 章逐一將三根柱子打磨成拆解法、卡片法與一題三變；第 5-6 章把日常與考場納入系統管治；第 7-8 章則把整套機制壓縮成各學科公理與人機共進飛輪。"
+        data-note-transition="看清了整本書的論證脈絡，第 14 頁我們提煉最精華的 4 條核心結論與「今晚就能做的一件事」。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">12 · 全書論證脈絡 <span class="archetype-badge">版型 3：結合論法 Pyramid Deduction</span></div>
+            <h2 class="action-title">各章結論環環相扣：前一章的底層突破，正是下一章高效運轉的前提</h2>
+          </div>
+          <div class="slide-page-badge">P13 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="svg-box" style="flex:1;">
+            <svg viewBox="0 0 1120 390" xmlns="http://www.w3.org/2000/svg" aria-label="全書八章因果遞進脈絡">
+              <!-- Top Conclusion -->
+              <rect x="210" y="14" width="700" height="62" rx="10" fill="#051C2C"/>
+              <text x="560" y="42" text-anchor="middle" fill="#FBBF24" font-size="16" font-weight="700">終極產出：具備「自主構建 × 跨界遷移 × 持續迭代」的終身學習者</text>
+              <text x="560" y="64" text-anchor="middle" fill="#CBD5E1" font-size="12">學會學習，比記住任何單一知識更重要（語義樹幹 ＞ 零散枝葉）</text>
+
+              <!-- Arrows up -->
+              <line x1="280" y1="108" x2="400" y2="80" stroke="#1E3A8A" stroke-width="2"/>
+              <line x1="560" y1="108" x2="560" y2="80" stroke="#1E3A8A" stroke-width="2"/>
+              <line x1="840" y1="108" x2="720" y2="80" stroke="#1E3A8A" stroke-width="2"/>
+
+              <!-- Middle 3 Pillars -->
+              <rect x="40" y="112" width="320" height="122" rx="10" fill="#F8FAFC" stroke="#1E3A8A" stroke-width="2"/>
+              <text x="58" y="140" fill="#1E3A8A" font-size="14" font-weight="700">前提一：校正學習觀（Ch1）</text>
+              <text x="58" y="164" fill="#334155" font-size="12">不先清理「搬運工思維」與三偽努力，</text>
+              <text x="58" y="184" fill="#334155" font-size="12">後面越勤奮反而耗損越快。</text>
+              <text x="58" y="214" fill="#B45309" font-size="12" font-weight="700">➔ 交出「三基本單元＋成長思維」前提</text>
+
+              <rect x="400" y="112" width="320" height="122" rx="10" fill="#FFFDF7" stroke="#D97706" stroke-width="2"/>
+              <text x="418" y="140" fill="#B45309" font-size="14" font-weight="700">前提二：閉環與引擎（Ch2–Ch6）</text>
+              <text x="418" y="164" fill="#334155" font-size="12">拆解聯繫賦予意義（Ch2），卡片間隔提取</text>
+              <text x="418" y="184" fill="#334155" font-size="12">（Ch3），手術檯錯題遷移（Ch4）構成微閉環；</text>
+              <text x="418" y="214" fill="#0369A1" font-size="12" font-weight="700">➔ Ch5–6 以系統習慣與三段節奏實現穩態輸出</text>
+
+              <rect x="760" y="112" width="320" height="122" rx="10" fill="#E0F2FE" stroke="#00A9F4" stroke-width="2"/>
+              <text x="778" y="140" fill="#0369A1" font-size="14" font-weight="700">前提三：公理化與人機協同（Ch7–Ch8）</text>
+              <text x="778" y="164" fill="#0F172A" font-size="12">微閉環落入具體學科，化繁為少數公理、</text>
+              <text x="778" y="184" fill="#0F172A" font-size="12">守恆與因果鏈（Ch7）；</text>
+              <text x="778" y="214" fill="#051C2C" font-size="12" font-weight="700">➔ Ch8 用 AI 教練＋三週循環防止方法固化老化</text>
+
+              <!-- Foundation Layer -->
+              <rect x="40" y="262" width="1040" height="108" rx="10" fill="#F1F5F9" stroke="#CBD5E1"/>
+              <text x="64" y="290" fill="#051C2C" font-size="13.5" font-weight="700">貫穿全書的唯一底層方法論：第一性原理追問與重建</text>
+              <text x="64" y="318" fill="#475569" font-size="12.5">• 面對概念：問「它到底是什麼？如何連回基礎公理？」（第 2、7 章）</text>
+              <text x="64" y="342" fill="#475569" font-size="12.5">• 面對忘記與犯錯：問「卡在編碼/鞏固/提取哪一環？決策慣性是什麼？」（第 1、3、4、6 章）</text>
+              <text x="600" y="318" fill="#475569" font-size="12.5">• 面對執行阻力：問「如何靠系統環境取代有限意志力？」（第 5 章）</text>
+              <text x="600" y="342" fill="#475569" font-size="12.5">• 面對 AI 衝擊：問「如何讓機器逼我思考，而非替我思考？」（第 8 章）</text>
+            </svg>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》全書 1–8 章邏輯彙整</span><span>McKinsey Deductive Pyramid</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 14: SUMMARY & ACTION ==================== -->
+      <section class="slide" id="slide-14" data-kicker="總結與即時行動" data-title="濃縮四大核心洞察，今晚花 3 分鐘啟動明天三件事"
+        data-note-conclusion="全書濃縮為四句核心法則，以及讀者今晚睡前即可啟動的最小可行動作：寫下明天具體做什麼與做多少，並清理桌面攤開書本。"
+        data-note-evidence="行動來源直接出自第 3 章（三張卡片五分鐘起步）、第 5 章（今晚睡前寫下明日三件事的具體時間與題數＋把練習冊攤開在桌面）、與第 8 章（今晚開始記錄三週迭代第一週數據）。"
+        data-note-transition="最後一頁（第 15 頁）提供全書 8 章第一性原理學習公式與核心實驗速查附錄。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">13 · 高階總結與行動 <span class="archetype-badge">版型 2：結論與 24H 落地</span></div>
+            <h2 class="action-title">讀完本書的 4 個黃金洞察，以及「今晚就能立刻開始」的最小啟動動作</h2>
+          </div>
+          <div class="slide-page-badge">P14 / 15</div>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="mck-card">
+                <h4>1. 費力感才是記憶加固的信號</h4>
+                <p>聽懂講解只是被動流暢感；合上書想不起來時的「用力拉扯」，才是大腦真正塑造神經通路的時刻。</p>
+              </div>
+              <div class="mck-card">
+                <h4>2. 刷題與錯題本的目的是「消滅問題」</h4>
+                <p>用「一題三變」抽離數字血肉提煉骨架；讓錯題本從厚變薄，而不是淪為自我安慰的複印收藏室。</p>
+              </div>
+              <div class="mck-card">
+                <h4>3. 系統永遠比意志力可靠</h4>
+                <p>把「我要學好」許願單改為「幾點做幾題」行動指南，搭配絕不失敗小目標與環境減阻。</p>
+              </div>
+              <div class="mck-card">
+                <h4>4. 在 AI 時代用「追問」拉開差距</h4>
+                <p>不向 AI 要現成答案，而讓它逐問引導、三點反駁，並以三週循環迭代學習方法。</p>
+              </div>
+            </div>
+            <div class="mck-card navy" style="justify-content:space-between;padding:20px 24px;">
+              <div>
+                <h4 style="font-size:17px;margin-bottom:10px;">今晚立刻可做的一件事（零門檻啟動）</h4>
+                <p style="font-size:13.5px;color:#E2E8F0;margin-bottom:14px;">不要等明天心血來潮，睡前只需 5 分鐘完成以下三步：</p>
+                <ul class="mck-list" style="gap:12px;">
+                  <li><strong style="color:#FBBF24;">Step 1 寫下明日三項具體任務：</strong>使用標準格式「幾點到幾點＋做什麼＋做多少」（例如 19:00–19:30 做第三章第 1–5 題），置於書桌。</li>
+                  <li><strong style="color:#7DD3FC;">Step 2 製作 3 張空白提取卡：</strong>從今天剛學內容挑 3 個核心點，正面寫問題、背面寫答案，明早開工先抽考 5 分鐘。</li>
+                  <li><strong style="color:#6EE7B7;">Step 3 攤開書本・收走手機：</strong>將明日要寫的練習冊翻到目標頁放桌中央，把手機移出書房降低啟動阻力。</li>
+                </ul>
+              </div>
+              <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;border-left:3px solid #FBBF24;font-size:12.5px;color:#FDE68A;">
+                團隊共學建議：可於知識庫首頁「行動打卡」同步勾選並於週會進行一次「三問法轉述測試」。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》第 3、5、8 章實操指南</span><span>Actionable Executive Summary</span></div>
+      </section>
+
+      <!-- ==================== SLIDE 15: APPENDIX ==================== -->
+      <section class="slide" id="slide-15" data-kicker="附錄 · 八大公式總表" data-title="全書八章第一性原理學習公式與實證索引"
+        data-note-conclusion="本頁完整彙整《第一性原理學習法》全書 8 章作者原創學習公式與對應的核心方法實證。"
+        data-note-evidence="所有公式一字不差摘自原書各章結尾「本章第一性原理學習公式」欄位。"
+        data-note-transition="簡報結束；可點擊左上角返回知識庫首頁，繼續探索《用第一性原理讀懂日常：50個生活問題的重新拆解》或於團隊筆記區留存心得。">
+        <div class="slide-header">
+          <div>
+            <div class="slide-kicker">14 · 附錄速查 <span class="archetype-badge">全書 8 章公式與檢索索引</span></div>
+            <h2 class="action-title">附錄：《第一性原理學習法》全書八大公式、核心實證與立即行動總表</h2>
+          </div>
+          <div class="slide-page-badge">P15 / 15</div>
+        </div>
+        <div class="slide-body">
+          <table class="mck-table">
+            <thead>
+              <tr>
+                <th style="width:10%;">章節</th>
+                <th style="width:24%;">第一性原理學習公式</th>
+                <th style="width:32%;">關鍵實證／底層模型（忠於原著）</th>
+                <th style="width:34%;">核心動作工具</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>第 1 章</strong></td>
+                <td class="hl">方向 × 方法 ＞ 努力</td>
+                <td>挖井 7m vs 8m；艾賓浩斯 (9vs80 / 38vs68)；德韋克實驗；荷葉第 47 天</td>
+                <td>辨識偽努力三陷阱、實行「三問法」、補齊編碼/鞏固/提取</td>
+              </tr>
+              <tr>
+                <td><strong>第 2 章</strong></td>
+                <td class="hl">理解 ＝ 拆解 ＋ 聯繫</td>
+                <td>1975 Craik &amp; Tulving 加工深度；理解三層次（複述/舉例/遷移）</td>
+                <td>5 分鐘小學生錄音檢驗、五個為什麼、核心三問、三步拆解法</td>
+              </tr>
+              <tr>
+                <td><strong>第 3 章</strong></td>
+                <td class="hl">記憶 ＝ 提取 × 間隔</td>
+                <td>遺忘為大腦篩選系統；記憶開關在輸出端；快忘未忘時激活效果最佳</td>
+                <td>收集-加工-調度卡片系統（每天 3 張卡 × 5 分鐘動態間隔）</td>
+              </tr>
+              <tr>
+                <td><strong>第 4 章</strong></td>
+                <td class="hl">能力 ＝ 應用 × 反思</td>
+                <td>刷題目的在暴露弱點與練輸出；外層數字血肉 vs 內層公式骨架</td>
+                <td>限時五步刷題、一題三變法、手術檯式/原卷塗黑消滅錯題</td>
+              </tr>
+              <tr>
+                <td><strong>第 5 章</strong></td>
+                <td class="hl">效率 ＝ 系統 × 習慣</td>
+                <td>計劃非許願單而是幫大腦提前做決定（小林案例）；意志力有限會透支</td>
+                <td>明日三件事計劃、四步知識體系（含每月重構）、五招微習慣</td>
+              </tr>
+              <tr>
+                <td><strong>第 6 章</strong></td>
+                <td class="hl">成績 ＝ 知識 × 輸出</td>
+                <td>高壓滑落現象；卡尼曼《思考，快與慢》飛行教官迴歸均值實驗</td>
+                <td>限時閉卷混合、分區草稿、4-7-8呼吸、1/5-3/5-1/5、決策覆盤</td>
+              </tr>
+              <tr>
+                <td><strong>第 7 章</strong></td>
+                <td class="hl">高手 ＝ 找規律 × 建連接 × 能遷移</td>
+                <td>語文邏輯共情、數學公理鏈、英語語感、理化四大守恆、史政因果網</td>
+                <td>句子接龍與細節替換、公理自推鏈、朗讀換詞、宇宙記賬本、因果鏈</td>
+              </tr>
+              <tr>
+                <td><strong>第 8 章</strong></td>
+                <td class="hl">未來競爭力 ＝ 第一性思考 × AI</td>
+                <td>防把 AI 當搜題引擎致思考退化；打破確認偏誤；改變方法瓶頸期</td>
+                <td>AI 四角色（陪練/辯手/對比/出題）＋ 三週測量微調對比迭代</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout-gold">
+            <strong>知識庫聯動：</strong>點擊上方「返回知識庫首頁」，可使用 <code>Ctrl + K</code> 跨書搜尋全部條目，並與團隊成員於 Supabase 共學區同步實戰筆記。
+          </div>
+        </div>
+        <div class="source-footer"><span>來源：《第一性原理學習法》北辰（人民郵電出版社，ISBN 9787115706874）</span><span>End of Deck · FP-01</span></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 3-Part Speaker Notes Drawer -->
+  <aside class="notes-drawer" id="notes-drawer" aria-label="講者三段式備忘稿">
+    <div class="notes-header">
+      <span id="notes-slide-label">Slide 01 / 15</span>
+      <span>講者提示：按 [N] 收合講稿 · [G] 總覽檢索 · [T] 10 分鐘倒數計時 · [←/→] 翻頁</span>
+    </div>
+    <div class="notes-grid">
+      <div class="note-col"><strong>① 本頁結論</strong><span id="note-conclusion"></span></div>
+      <div class="note-col"><strong>② 補充說明（忠於原著）</strong><span id="note-evidence"></span></div>
+      <div class="note-col"><strong>③ 下一頁轉場</strong><span id="note-transition"></span></div>
+    </div>
+  </aside>
+
+  <!-- Thumbnail Overview & In-Deck Search Overlay -->
+  <div class="grid-overlay" id="grid-overlay" aria-label="投影片縮圖總覽">
+    <div class="grid-overlay-bar">
+      <input type="search" id="grid-filter" class="grid-filter-input" placeholder="頁內關鍵字篩選投影片（例：艾賓浩斯、三問法、錯題本、守恆、AI）..." />
+      <button type="button" class="ctrl-btn" id="btn-close-grid">✕ 關閉 (Esc)</button>
+    </div>
+    <div class="thumbs-grid" id="thumbs-grid"></div>
+  </div>
+
+  <script src="../assets/js/deck.js"></script>
+</body>
+</html>
